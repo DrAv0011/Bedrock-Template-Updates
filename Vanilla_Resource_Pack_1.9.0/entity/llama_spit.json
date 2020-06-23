@@ -1,0 +1,14 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:llama_spit",
+      "textures": {
+        "default": "textures/entity/llama/spit"
+      },
+      "geometry": {
+        "default": "geometry.llamaspit"
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "format_version": "1.8.0",
+  "animation_controllers": {
+    "controller.animation.zombie_pigman.look_at.v1.0": {
+      "states": {
+        "default": {
+          "animations": [ { "zombie_pigman_look_at": [] } ]
+        }
+      }
+    }
+  }
+}

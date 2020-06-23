@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:enderman",
+      "textures": {
+        "default": "textures/entity/enderman/enderman"
+      },
+      "geometry": {
+        "default": "geometry.enderman"
+      },
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 7
+      }
+    }
+  }
+}

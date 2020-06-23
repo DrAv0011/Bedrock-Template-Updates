@@ -1,0 +1,20 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:creeper",
+      "textures": {
+        "default": "textures/entity/creeper/creeper",
+        "charged": "textures/entity/creeper/creeper_armor"
+      },
+      "geometry": {
+        "default": "geometry.creeper",
+        "charged": "geometry.creeper.charged"
+      },
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 6
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:magma_cube",
+      "textures": {
+        "default": "textures/entity/slime/magmacube"
+      },
+      "geometry": {
+        "default": "geometry.lavaslime"
+      },
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 20
+      }
+    }
+  }
+}
