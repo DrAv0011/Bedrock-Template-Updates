@@ -14,6 +14,9 @@
       "geometry": {
         "default": "geometry.humanoid.armor.leggings"
       },
+      "scripts": {
+        "parent_setup": "variable.leg_layer_visible = 0.0;"
+      },
       "render_controllers": [ "controller.render.armor" ]
     }
   }
