@@ -843,13 +843,6 @@
   //---------------------------
   //---------------------------
 
-  "selected_item_details@common.selected_item_details": {
-    "offset": [ 0, "-37px" ]
-  },
-
-  //---------------------------
-  //---------------------------
-
   "inventory_screen_pocket_base@common.inventory_screen_common": {
     "button_mappings": [
       {
@@ -1256,7 +1249,7 @@
       },
       {
         "selected_item_details_factory@common.selected_item_details_factory": {
-          "control_name": "@crafting_pocket.selected_item_details"
+          "$offset": [ 0, "-37px" ]
         }
       },
       {

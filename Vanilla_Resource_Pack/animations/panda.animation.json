@@ -30,7 +30,7 @@
           "rotation": [ "(query.is_scared * Math.cos(query.life_time * 71.62) * 16.2) + (query.sit_amount * -90) - this", 0.0, 0.0 ]
         },
         "head": {
-          "rotation": [ "query.is_eating ? (90 + 11.5 * Math.sin(query.life_time * 327.6)) : (query.sit_amount * (100 - this)) - this", 0.0, 0.0 ]
+          "rotation": [ "query.is_eating ? (90 + 11.5 * Math.sin(query.life_time * 750)) : (query.sit_amount * (100 - this)) - this", 0.0, 0.0 ]
         },
         "leg0": {
           "rotation": [ 0.0, 0.0, "32.7 - this" ]
@@ -39,10 +39,10 @@
           "rotation": [ 0.0, 0.0, "-32.7 - this" ]
         },
         "leg2": {
-          "rotation": [ "(query.is_eating ? (-23 - (16.5 * Math.sin(query.life_time * 327.6))) : 0) - this", 0.0, -15 ]
+          "rotation": [ "(query.is_eating ? (-23 - (16.5 * Math.sin(query.life_time * 750))) : 0) - this", 0.0, -15 ]
         },
         "leg3": {
-          "rotation": [ "(query.is_eating ? (-23 - (16.5 * Math.sin(query.life_time * 327.6))) : 0) - this", 0.0, 15 ]
+          "rotation": [ "(query.is_eating ? (-23 - (16.5 * Math.sin(query.life_time * 750))) : 0) - this", 0.0, 15 ]
         }
       }
     },

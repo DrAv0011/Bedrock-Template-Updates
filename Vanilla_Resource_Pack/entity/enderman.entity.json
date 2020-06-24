@@ -3,12 +3,13 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:enderman",
+      "min_engine_version": "1.8.0",
       "materials": { "default": "enderman" },
       "textures": {
         "default": "textures/entity/enderman/enderman"
       },
       "geometry": {
-        "default": "geometry.enderman"
+        "default": "geometry.enderman.v1.8"
       },
       "scripts": {
         "pre_animation": [

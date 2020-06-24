@@ -329,23 +329,11 @@
     ]
   },
 
-  "scroll_panel@common.scrolling_panel_with_offset": {
+  "scroll_panel@common.container_scroll_panel": {
     "size": [ "100% - 12px", "100% - 12px" ],
 
     "$scrolling_content": "loom.scroll_grid_panel",
-    "$collection_name": "patterns",
-
-    "$scrolling_pane_offset": [ 0, 0 ],
-    "$scroll_view_port_offset": [ 1, 1 ],
-    "$scroll_view_port_offset_touch": [ 0, 1 ],
-    "$scrolling_pane_size": [ "100%", "100%" ],
-    "$scroll_view_port_size": [ "100% - 2px", "100% - 2px" ],
-    "$scroll_view_port_size_touch": [ "100% - 8px", "100% - 2px" ],
-    "$scroll_bar_right_padding_size": [ 0, 0 ],
-    "$scroll_background_image_control": "crafting.scroll_background_image",
-    "$scroll_track_image_control": "crafting.scrollbar_track",
-    "$scroll_box_mouse_image_control": "crafting.scroll_box_image",
-    "$scroll_box_touch_image_control": "common.new_touch_scrollbar_box_image"
+    "$collection_name": "patterns"
   },
 
   "pattern_book_panel@common.root_panel": {

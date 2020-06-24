@@ -259,5 +259,11 @@
   "$store_rating_text_panel_color": [ 0.7, 0.7, 0.7 ],
   "$store_white_text_color": [ 1, 1, 1 ],
   "$store_dark_grey_text_color": [ 0.3, 0.3, 0.3 ],
-  "$store_light_grey_text_color": [ 0.7, 0.7, 0.7 ]
+  "$store_light_grey_text_color": [ 0.7, 0.7, 0.7 ],
+
+  //////// Trade colors ////////
+  "$trade_tier_name_color": [ 1.0, 1.0, 1.0 ],
+  "$trade_tier_name_locked_color": [ 0.5, 0.5, 0.5 ],
+  "$trade_lock_color": [ 0.0, 0.0, 0.0 ],
+  "$enchantment_button_default_text_color": [ 1.0, 0.8, 1.0 ]
 }

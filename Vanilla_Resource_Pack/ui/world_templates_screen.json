@@ -44,7 +44,9 @@
     "$button_label": "selectTemplate.world",
     "$radio_toggle_group": true,
     "$toggle_group_forced_index": 0,
-    "$toggle_group_default_selected": "$default_tab"
+    "$toggle_group_default_selected": "$default_tab",
+    "$toggle_tts_toggle_on_text": "",
+    "$toggle_tts_toggle_off_text": ""
   },
 
   "new_realm_toggle@common_toggles.dark_image_toggle": {
@@ -55,7 +57,9 @@
     "$button_label": "selectTemplate.realm",
     "$radio_toggle_group": true,
     "$toggle_group_forced_index": 1,
-    "$toggle_group_default_selected": "$default_tab"
+    "$toggle_group_default_selected": "$default_tab",
+    "$toggle_tts_toggle_on_text": "",
+    "$toggle_tts_toggle_off_text": ""
   },
 
   "world_button_content": {
@@ -130,7 +134,8 @@
 
   "help_button@common_buttons.dark_text_button": {
     "$pressed_button_name": "button.help",
-    "$button_text": "selectTemplate.help"
+    "$button_text": "selectTemplate.help",
+    "$button_tts_header": "accessibility.worldTemplates.help"
   },
 
   "grid_button_content_template": {

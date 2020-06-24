@@ -344,6 +344,33 @@
           "$button_action": "button.purchase",
           "$button_focus_precedence": 6
         }
+      },
+      {
+        "disclaimer_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "legal_text_label": {
+                "type": "label",
+                "size": [ "100%", "default" ],
+                "color": "$body_text_color",
+                "font_type": "smooth",
+                "font_scale_factor": 0.68,
+                "text": "#purchase_with_currency_disclaimer",
+                "bindings": [
+                  {
+                    "binding_name": "#purchase_with_currency_disclaimer"
+                  },
+                  {
+                    "binding_name": "#currency_purchase_visible",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
       }
     ]
   },
@@ -616,7 +643,7 @@
           "@expanded_skin_pack.screen_exit_size_animation_push",
           "@expanded_skin_pack.screen_exit_size_animation_pop",
           "@common.screen_entrance_size_animation_push",
-          "@common.screen_entrance_size_animation_pop"          
+          "@common.screen_entrance_size_animation_pop"
         ]
       }
     ],

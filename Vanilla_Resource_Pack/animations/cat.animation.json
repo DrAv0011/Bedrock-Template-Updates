@@ -93,12 +93,12 @@
       "loop": true,
       "bones": {
         "body": {
-          "position": [ 0.0, "variable.LieDownAmount * -4.5 + variable.LieOnPlayer * (3 + query.is_baby * 6)", 0.0 ],
+          "position": [ 0.0, "variable.LieDownAmount * -4.5 + variable.LieOnPlayer * (4.5 + query.is_baby * 6)", 0.0 ],
           "rotation": [ 0.0, 0.0, "Math.lerprotate(0.0, 90.0, variable.LieDownAmount)" ]
         },
         "head": {
-          "position": [ 0.0, 0.7, 0.0 ],
-          "rotation": [ 0.0, "Math.lerprotate(this, 45.81, variable.LieDownAmount)", 0 ]
+          "position": [ -0.1, 0.0, -0.5 ],
+          "rotation": [ -10.0, "Math.lerprotate(this, 75.81, variable.LieDownAmount)", 0 ]
         },
         "backLegL": {
           "position": [ 0.0, -0.7, 0.0 ],
@@ -109,7 +109,7 @@
           "rotation": [ 28.65, 0.0, -28.65 ]
         },
         "frontLegL": {
-          "position": [ 0.0, -1.0, 0.0 ],
+          "position": [ 0.0, -1.0, -1.5 ],
           "rotation": [ -72.81, 0.0, 0.0 ]
         },
         "frontLegR": {

@@ -463,12 +463,20 @@
       { "padding@common.empty_panel": { "size": [ 2, "100%" ] } },
       { "mute_all_text_panel@chat_settings.mute_all_text_panel": {} },
       {
-        "mute_all_toggle@settings_common.option_toggle": {
+        "mute_all_toggle@settings_common.option_generic": {
+          "$control_name": "settings_common.option_toggle_control",
           "size": [ 30, 30 ],
           "$option_binding_name": "#hide_chat",
           "$option_enabled_binding_name": "#hide_chat_enabled",
           "$toggle_name": "hide_chat",
-          "$focus_id": "mute_all_toggle_focus_id"
+          "$focus_id": "mute_all_toggle_focus_id",
+          "$toggle_tts_header": "accessibility.chat.tts.muteChatToggle",
+          "variables": [
+            {
+              "requires": "$desktop_screen",
+              "$one_line_layout": true
+            }
+          ]
         }
       }
     ]
@@ -594,14 +602,18 @@
     "$slider_name": "chat_font_size",
     "$slider_value_binding_name": "#chat_font_size",
     "$option_enabled_binding_name": "#chat_font_size_enabled",
+    "$slider_tts_text_value": "#chat_font_size_text_value",
 
     "$focus_override_right": "FOCUS_OVERRIDE_STOP",
     "$focus_override_left": "FOCUS_OVERRIDE_STOP",
 
     "$label_bindings": [
       {
-        "binding_name": "#chat_font_size_custom_label",
+        "binding_name": "$option_label",
         "binding_condition": "visible"
+      },
+      {
+        "binding_name": "$slider_tts_text_value"
       }
     ],
     "bindings": [
@@ -621,14 +633,18 @@
     "$slider_name": "chat_line_spacing",
     "$slider_value_binding_name": "#chat_line_spacing",
     "$option_enabled_binding_name": "#chat_line_spacing_enabled",
+    "$slider_tts_text_value": "#chat_line_spacing_text_value",
 
     "$focus_override_right": "FOCUS_OVERRIDE_STOP",
     "$focus_override_left": "FOCUS_OVERRIDE_STOP",
 
     "$label_bindings": [
       {
-        "binding_name": "#chat_line_spacing_custom_text",
+        "binding_name": "$option_label",
         "binding_condition": "visible"
+      },
+      {
+        "binding_name": "$slider_tts_text_value"
       }
     ]
   },

@@ -126,6 +126,9 @@
     "cake": {
       "textures": "textures/items/cake"
     },
+    "campfire": {
+      "textures": "textures/items/campfire"
+    },    
     "carrot": {
       "textures": "textures/items/carrot"
     },

@@ -1758,51 +1758,7 @@
     ]
   },
 
-  "scroll_box_image": {
-    "type": "image",
-    "texture": "textures/ui/ScrollBox"
-  },
-
-  "scroll_bar_side_rails": {
-    "type": "image",
-    "layer": 1,
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "texture": "textures/ui/ScrollGutterWithBG"
-  },
-
-  "scrollbar_track": {
-    "type": "panel",
-    "layer": 1,
-    "anchor_to": "top_right",
-    "anchor_from": "top_right",
-    "controls": [
-      {
-        "rails@crafting.scroll_bar_side_rails": {
-          "allow_clipping": false
-        }
-      }
-    ]
-  },
-
-  "scroll_background_image": {
-    "type": "image",
-    "layer": 2,
-    "texture": "textures/ui/recipe_book_pane_bg"
-  },
-
-  "scroll_panel@common.scrolling_panel_with_offset": {
-    "$scrolling_pane_offset": [ 0, 0 ],
-    "$scroll_view_port_offset": [ 1, 1 ],
-    "$scroll_view_port_offset_touch": [ 0, 1 ],
-    "$scrolling_pane_size": [ "100%", "100%" ],
-    "$scroll_view_port_size": [ "100% - 2px", "100% - 2px" ],
-    "$scroll_view_port_size_touch": [ "100% - 8px", "100% - 2px" ],
-    "$scroll_bar_right_padding_size": [ 0, 0 ],
-    "$scroll_background_image_control": "crafting.scroll_background_image",
-    "$scroll_track_image_control": "crafting.scrollbar_track",
-    "$scroll_box_mouse_image_control": "crafting.scroll_box_image",
-    "$scroll_box_touch_image_control": "common.new_touch_scrollbar_box_image",
+  "scroll_panel@common.container_scroll_panel": {
     "$scrolling_panel_base_button_mappings": [
       {
         "from_button_id": "button.menu_select",
