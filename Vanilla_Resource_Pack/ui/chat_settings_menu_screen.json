@@ -98,6 +98,9 @@
     // "$button_content", "$pressed_button_name"
     "size": [ "100%", 30 ],
 
+    // Green background made text hard to read, only change border color
+    "$hover_button_texture": "$default_button_texture",
+
     "$focus_override_right": "FOCUS_OVERRIDE_STOP",
     "$focus_override_left": "FOCUS_OVERRIDE_STOP"
   },
@@ -106,6 +109,8 @@
     "size": [ "100%", 30 ],
     "$pressed_button_name": "button.reset_chat_settings",
     "$button_text": "options.resetSettings",
+
+    "$hover_button_texture": "$default_button_texture",
 
     "$focus_override_right": "FOCUS_OVERRIDE_STOP",
     "$focus_override_left": "FOCUS_OVERRIDE_STOP",
@@ -197,14 +202,9 @@
     ]
   },
 
-  "chat_settings_button_content": {
-    "type": "stack_panel",
-    "orientation": "horizontal",
-    "size": [ "100%c", "100%" ],
-    "controls": [
-      { "open_indicator@chat_settings.text_fitting_label": { "$text": "<" } },
-      { "settings_label@chat_settings.text_fitting_label": { "$text": "chat.settings" } }
-    ]
+  "chat_settings_button_label@chat_settings.text_fitting_label": {
+    "size": [ "default", "100%" ],
+    "$text": "chat.settings"
   },
 
   "chat_settings_button@common_buttons.light_content_button": {
@@ -216,7 +216,7 @@
     // Make the button grow to fit its content
     "$button_state_panel": "common_buttons.new_ui_width_fitting_button_panel",
     "$button_type_panel": "common_buttons.width_fitting_button_content_panel",
-    "$button_content": "chat_settings.chat_settings_button_content",
+    "$button_content": "chat_settings.chat_settings_button_label",
     "$button_size_override": [ "100%c", "100%" ],
 
     // There are currently no focusable elements alongside the Chat Settings Button
@@ -299,7 +299,7 @@
           "type": "label",
           "size": [ "100%", "50%" ],
           "text": "#text",
-          "color": "$place_holder_text_color",
+          "color": "$secondary_text_color",
           "bindings": [
             {
               "binding_name": "$option_state_binding_name",
@@ -325,7 +325,7 @@
 
   // Buttons //
 
-  "mute_menu_button@chat_settings.light_button": {
+  "mute_menu_button@chat_settings.dark_button": {
     "$pressed_button_name": "button.open_mute_section",
     "$button_content": "chat_settings.section_button_content_template",
     // Alter the button text for the content template
@@ -333,15 +333,15 @@
     "$option_state_binding_name": "#mute_section_state"
   },
 
-  "font_menu_button@chat_settings.light_button": {
+  "font_menu_button@chat_settings.dark_button": {
     "$pressed_button_name": "button.open_font_section",
     "$button_content": "chat_settings.section_button_content_template",
     // Alter the button text for the content template
-    "$chat_section_name": "chat.settings.font",
+    "$chat_section_name": "chat.settings.chatFont",
     "$option_state_binding_name": "#font_section_state"
   },
 
-  "color_menu_button@chat_settings.light_button": {
+  "color_menu_button@chat_settings.dark_button": {
     "$pressed_button_name": "button.open_color_section",
     "$button_content": "chat_settings.section_button_content_template",
     // Alter the button text for the content template
@@ -409,10 +409,30 @@
   // Chat Settings Mute Section - Content
 
   // Mute All Toggle //
+  "mute_all_toggle_panel": {
+    "type": "panel",
+    "controls": [
+      {
+        "mute_all_toggle@settings_common.option_toggle": {
+          "size": [ 30, 30 ],
+          "offset": [ 0, 2 ],
+          "anchor_from": "left_middle",
+          "anchor_to": "left_middle",
+
+          "$option_binding_name": "#hide_chat",
+          "$option_enabled_binding_name": "#hide_chat_enabled",
+          "$toggle_name": "hide_chat",
+          "$focus_id": "mute_all_toggle_focus_id",
+
+          "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+          "$focus_override_left": "FOCUS_OVERRIDE_STOP"
+        }
+      }
+    ]
+  },
 
   "mute_icon_panel": {
     "type": "panel",
-    "size": [ 20, "100%" ],
     "controls": [
       {
         "mute_icon": {
@@ -433,22 +453,14 @@
 
   "mute_all_text_panel": {
     "type": "panel",
-    "size": [ "fill", "100%" ],
     "controls": [
       {
         "mute_all_text": {
           "type": "label",
-          "size": [ "100%", 10 ],
+          "size": [ "default", 10 ],
           "text_alignment": "left",
-          "text": "#text",
-          "color": "$dark_button_default_text_color",
-          "bindings": [
-            {
-              "binding_name": "#mute_all_text",
-              "binding_name_override": "#text",
-              "binding_condition": "visible"
-            }
-          ]
+          "text": "chat.settings.muteAll",
+          "color": "$dark_button_default_text_color"
         }
       }
     ]
@@ -459,7 +471,8 @@
     "orientation": "horizontal",
     "size": [ "100%", 30 ],
     "controls": [
-      { "mute_icon_panel@chat_settings.mute_icon_panel": {} },
+      { "mute_all_toggle_panel@chat_settings.mute_all_toggle_panel": { "size": [ "fill", "100%" ] } },
+      { "mute_icon_panel@chat_settings.mute_icon_panel": { "size": [ "100%c", "100%" ] } },
       { "padding@common.empty_panel": { "size": [ 2, "100%" ] } },
       { "mute_all_text_panel@chat_settings.mute_all_text_panel": {} },
       {
@@ -527,7 +540,7 @@
   // Chat Settings Font Section - Top Button
 
   "font_section_top_button_content@chat_settings.left_symbol_button_content_template": {
-    "$button_text": "chat.settings.font",
+    "$button_text": "chat.settings.chatFont",
     "$left_symbol": "<"
   },
 
@@ -539,7 +552,7 @@
   /////////////////////////////////////////////////////////////////////////////
   // Chat Settings Font Section - Content
 
-  // Typeface //
+  // Typeface / Font Type //
 
   "typeface_dropdown_content@settings_common.option_radio_dropdown_group": {
     "$radio_buttons": [
@@ -560,7 +573,7 @@
   },
 
   "typeface_dropdown@settings_common.option_dropdown": {
-    "$option_label": "chat.settings.typeface",
+    "$option_label": "chat.settings.font",
     "$dropdown_content": "chat_settings.typeface_dropdown_content",
     "$dropdown_area": "font_content",
     "$dropdown_name": "chat_typeface_dropdown",
@@ -907,11 +920,7 @@
     "$toggle_binding_condition": "visible",
 
     // Image
-    "$content_toggle_image": "textures/ui/text_color",
-    "$content_toggle_image_size": [ 12, 12 ],
-    "$content_toggle_image_color_binding": "#font_content_toggle_image_color",
-    "$content_toggle_image_binding_type": "collection",
-    "$content_toggle_image_binding_condition": "once",
+    "$ignore_content_toggle_image": true,
 
     // Label
     "$content_toggle_label": "#font_content_toggle_label",
@@ -927,10 +936,11 @@
     // Panel background - taken from common_store's filter_sort_toggle
     "$border_visible": true,
     "$button_size_override": [ "100%", "100% + 1px" ],
+    // Don't change background, just have border change from black to white
     "$default_texture": "textures/ui/banners_no_border",
     "$hover_texture": "textures/ui/banners_no_border",
-    "$pressed_texture": "textures/ui/banners_no_border_dark_hover",
-    "$pressed_no_hover_texture": "textures/ui/banners_no_border_dark_hover"
+    "$pressed_texture": "textures/ui/banners_no_border",
+    "$pressed_no_hover_texture": "textures/ui/banners_no_border"
   },
 
   "font_color_grid": {

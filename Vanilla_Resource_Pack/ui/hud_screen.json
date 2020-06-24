@@ -1140,7 +1140,14 @@
   },
 
   "survival_item_name_text@hud.item_name_text": {
-    "offset": [ 0, -32 ]
+    "$offset|default": [ 0, -32 ],
+    "variables": [
+      {
+        "requires": "$pocket_screen",
+        "$offset": [ 0, -10 ]
+      }
+    ],
+    "offset": "$offset"
   },
 
   "creative_above_interact_button_item_text@hud.item_name_text": {
@@ -1756,7 +1763,18 @@
       },
       { "vignette_rend@vignette_renderer": {} },
       { "curor_rend@cursor_renderer": {} },
-      { "game_tip@game_tip.game_tip_panel": {} },
+      {
+        "game_tip@game_tip.game_tip_panel": {
+          "$offset": [ 0, "-80px" ],
+          "variables": [
+            {
+              "requires": "$pocket_screen",
+              "$offset": [ 0, "-50px" ]
+            }
+          ],
+          "offset": "$offset"
+        }
+      },
       { "sidebar@scoreboard.scoreboard_sidebar": {} },
       {
         "progress_rend@progress_indicator_renderer": {

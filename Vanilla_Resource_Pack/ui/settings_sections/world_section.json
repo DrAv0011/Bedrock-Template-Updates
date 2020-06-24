@@ -511,7 +511,7 @@
           "$focus_override_right": "FOCUS_OVERRIDE_STOP",
           "$toggle_binding_condition": "always_when_visible"
         }
-      },    
+      },
       {
         "show_coordinates_toggle@settings_common.option_toggle": {
           "$tts_section_header": "createWorldScreen.worldSettings",
@@ -920,18 +920,68 @@
       },
       {
         "export_template_panel": {
-          "ignored": "(not $is_world_edit or $is_mp_client or $trial or not $is_pregame or $export_template_disabled or not $win10_edition)",
-          "type": "panel",
-          "size": [ "100%", "100%c + 2px" ],
+          "ignored": "(not $is_world_edit or $is_mp_client or $trial or not $is_pregame or $export_template_disabled)",
+          "type": "stack_panel",
           "controls": [
+            {
+              "padding": {
+                "type": "panel",
+                "size": [ 0, 2 ]
+              }
+            },
+            {
+              "template_version@settings_common.option_text_edit": {
+                "ignored": "(not $education_edition)",
+                "$option_label": "gui.templateMinVersion",
+                "$text_box_name": "template_version_text_box",
+                "$option_binding_name": "#minimum_template_version",
+                "$option_enabled_binding_name": "#minimum_template_enabled",
+                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
+                "$text_edit_box_text_type": "ExtendedASCII"
+              }
+            },
+            {
+              "template_buttons": {
+                "ignored": "(not $education_edition or not $file_picking_supported)",
+                "type": "stack_panel",
+                "size": [ "100%", 32 ],
+                "orientation": "horizontal",
+                "controls": [
+                  {
+                    "template_image_picker_button@settings_common.action_button": {
+                      "size": [ "50%", 30 ],
+                      "anchor_from": "bottom_right",
+                      "anchor_to": "bottom_right",
+                      "$button_text": "gui.templateIconPickerButton",
+                      "$pressed_button_name": "template_image_picker_button"
+                    }
+                  },
+                  {
+                    "padding": {
+                      "type": "panel",
+                      "size": [ 1, 0 ]
+                    }
+                  },
+                  {
+                    "template_localization_picker_button@settings_common.action_button": {
+                      "size": [ "fill", 30 ],
+                      "anchor_from": "bottom_left",
+                      "anchor_to": "bottom_left",
+                      "$button_text": "gui.templateLocPickerButton",
+                      "$pressed_button_name": "template_localization_picker_button",
+                      "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+                    }
+                  }
+                ]
+              }
+            },
             {
               "export_template_button@settings_common.action_button": {
                 "size": [ "100%", 30 ],
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "$button_text": "gui.exportTemplate",
-                "$pressed_button_name": "export_template_button",
-                "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+                "$pressed_button_name": "export_template_button"
               }
             }
           ]
@@ -1115,7 +1165,7 @@
       },
       {
         "world_adventure_mode_toggle@settings_common.radio_with_label": {
-          "ignored": "($is_world_create)",
+          "ignored": "($is_world_create or $trial)",
           "$toggle_state_binding_name": "#world_game_mode_radio_adventure",
           "$radio_label_text": "createWorldScreen.gameMode.adventure"
         }

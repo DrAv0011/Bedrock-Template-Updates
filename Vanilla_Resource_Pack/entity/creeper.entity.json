@@ -3,6 +3,7 @@
   "minecraft:client_entity": {
     "description": {
       "identifier": "minecraft:creeper",
+      "min_engine_version": "1.8.0",
       "materials": {
         "default": "creeper",
         "charged": "charged_creeper"
@@ -12,8 +13,8 @@
         "charged": "textures/entity/creeper/creeper_armor"
       },
       "geometry": {
-        "default": "geometry.creeper",
-        "charged": "geometry.creeper.charged"
+        "default": "geometry.creeper.v1.8",
+        "charged": "geometry.creeper.charged.v1.8"
       },
       "spawn_egg": {
         "texture": "spawn_egg",
@@ -37,7 +38,7 @@
         { "creeper_head": "controller.animation.creeper.head" },
         { "creeper_legs": "controller.animation.creeper.legs" },
         { "creeper_swelling": "controller.animation.creeper.swelling" }
-      ],  
+      ],
       "render_controllers": [ "controller.render.creeper", "controller.render.creeper_armor" ]
     }
   }

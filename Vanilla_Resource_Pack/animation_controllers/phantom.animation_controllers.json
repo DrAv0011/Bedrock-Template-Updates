@@ -4,7 +4,19 @@
     "controller.animation.phantom.base_pose": {
       "states": {
         "default": {
-          "animations": [ { "phantom_base_pose": [] } ]
+          "animations": [ 
+            { "phantom_base_pose": [] } 
+          ],
+          "particle_effects": [
+            {
+              "effect": "wing_dust",
+              "locator": "left_wing"
+            },
+            {
+              "effect": "wing_dust",
+              "locator": "right_wing"
+            }
+          ]
         }
       }
     },

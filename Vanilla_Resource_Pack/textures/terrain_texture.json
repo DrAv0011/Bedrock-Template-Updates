@@ -4,6 +4,9 @@
   "padding": 8,
   "num_mip_levels": 4,
   "texture_data": {
+    "missing": {
+      "textures": "textures/misc/missing_texture"
+    },
     "grass_side": {
       "textures": [
         {
@@ -1123,6 +1126,9 @@
         "textures/blocks/farmland_wet",
         "textures/blocks/farmland_dry"
       ]
+    },
+    "farmland_side": {
+      "textures": "textures/blocks/dirt"
     },
     "wheat": {
       "textures": [

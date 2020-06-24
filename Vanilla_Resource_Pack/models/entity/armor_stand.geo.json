@@ -98,6 +98,12 @@
         "mirror": true
       },
       {
+        "name": "leftItem",
+        "pivot": [ 6, 14.5, 1 ],
+        "neverRender": false,
+        "parent": "leftArm"
+      },
+      {
         "name": "rightLeg",
         "pivot": [ -1.9, 12, 0 ],
         "cubes": [

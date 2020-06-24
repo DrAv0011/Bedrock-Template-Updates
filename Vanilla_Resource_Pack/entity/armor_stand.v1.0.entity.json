@@ -4,26 +4,10 @@
     "description": {
       "identifier": "minecraft:armor_stand",
       "materials": {
-        "default": "armor_stand",
-        "armor": "armor",
-        "armor_enchanted": "armor_enchanted",
-        "armor_leather": "armor_leather",
-        "armor_leather_enchanted": "armor_leather_enchanted"
+        "default": "armor_stand"
       },
       "textures": {
-        "default": "textures/entity/armor_stand",
-        "leather": "textures/models/armor/leather_1",
-        "leather_leggings": "textures/models/armor/leather_2",
-        "chain": "textures/models/armor/chain_1",
-        "chain_leggings": "textures/models/armor/chain_2",
-        "iron": "textures/models/armor/iron_1",
-        "iron_leggings": "textures/models/armor/iron_2",
-        "diamond": "textures/models/armor/diamond_1",
-        "diamond_leggings": "textures/models/armor/diamond_2",
-        "gold": "textures/models/armor/gold_1",
-        "gold_leggings": "textures/models/armor/gold_2",
-        "turtle": "textures/models/armor/turtle_1",
-        "enchanted": "textures/misc/enchanted_item_glint"
+        "default": "textures/entity/armor_stand"
       },
       "animations": {
         "default_pose": "animation.armor_stand.default_pose",
@@ -46,17 +30,10 @@
         { "wiggling": "controller.animation.armor_stand.wiggle" }
       ],
       "geometry": {
-        "default": "geometry.armor_stand",
-        "armor": "geometry.humanoid.armor1",
-        "armor_leggings": "geometry.humanoid.armor2"
+        "default": "geometry.armor_stand"
       },
-      "render_controllers": [
-        "controller.render.armor.chest.v1.0",
-        "controller.render.armor.legs.v1.0",
-        "controller.render.armor.feet.v1.0",
-        "controller.render.armor.head.v1.0",
-        "controller.render.armor_stand"
-      ]
+      "render_controllers": [ "controller.render.armor_stand" ],
+      "enable_attachables": true
     }
   }
 }

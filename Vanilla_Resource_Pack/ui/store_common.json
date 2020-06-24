@@ -138,11 +138,6 @@
     "$tag_tts_control_header": "accessibility.start.new"
   },
 
-  "beta_icon@common_store.tag": {
-    "$tag_texture": "textures/ui/betaIcon",
-    "$tag_text": "start.beta.icon"
-  },
-
   "status_new_offer_icon@common_store.new_offer_icon": {
     "anchor_from": "top_right",
     "anchor_to": "top_right",
@@ -715,9 +710,11 @@
   "pack_icon_stack_factory": {
     "type": "stack_panel",
     "size": [ "100%c + 2px", "100%" ],
-    "offset": [ 0, 1 ],
+    "$pack_icon_stack_factory_offset|default": [ 0, 1 ],
+    "offset": "$pack_icon_stack_factory_offset",
     "ignored": "$is_purchase_button",
     "orientation": "horizontal",
+    "$pack_icon_factory_collection_name|default": "pack_icons",
     "factory": {
       "name": "store_icon_factory",
       "control_ids": {
@@ -731,7 +728,7 @@
         "$icon_color"
       ]
     },
-    "collection_name": "pack_icons",
+    "collection_name": "$pack_icon_factory_collection_name",
     "bindings": [
       {
         "binding_type": "$store_factory_collection_details",
@@ -1395,7 +1392,8 @@
         "coin_icon@common_store.coin_icon": {
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
-          "offset": [ -2, 0 ],
+          "$coin_icon_offset|default": [ -2, 0 ],
+          "offset": "$coin_icon_offset",
           "layer": 3
         }
       }
@@ -3492,7 +3490,10 @@
   "offer_price_markdown_panel": {
     "type": "panel",
     "size": [ "100%c + 6px", "100%" ],
-    "$offer_price_offset|default": [ 0, 1 ],
+    "$offer_price_offset|default": [ 0, 2 ],
+    "$offer_price_strikethru_offset|default": [ 0, -1 ],
+    "$price_string|default": "",
+    "$offer_strikethrough_price_visible_binding|default": "#offer_strikethrough_price_visible",
     "controls": [
       {
         "offer_price": {
@@ -3502,7 +3503,7 @@
           "offset": "$offer_price_offset",
           "text": "#offer_full_price",
           "font_type": "smooth",
-          "layer": 4,
+          "layer": 4, // place behind sale banner when possible
           "bindings": [
             {
               "binding_type": "$store_factory_collection_details",
@@ -3521,7 +3522,7 @@
             },
             {
               "binding_type": "$offer_binding_type",
-              "binding_name": "#offer_strikethrough_price_visible",
+              "binding_name": "$offer_strikethrough_price_visible_binding",
               "binding_collection_name": "$offer_collection_name",
               "binding_name_override": "#visible"
             }
@@ -3529,9 +3530,8 @@
           "controls": [
             {
               "text_strike_through@common_store.text_strike_through": {
-                "size": [ "100% + 2px", 1 ],
-                "offset": [ 0, -1 ],
-                "layer": 5,
+                "size": [ "100% + 2px", 0.5 ],
+                "offset": "$offer_price_strikethru_offset",
                 "bindings": [
                   {
                     "binding_type": "$store_factory_collection_details",
@@ -3865,7 +3865,7 @@
                                               "type": "label",
                                               "color": "$coin_color",
                                               "size": [ "default", 10 ],
-                                              "offset": [ 0, 2 ],
+                                              "offset": [ 0, 1.5 ],
                                               "text": "#offer_prompt_text",
                                               "font_type": "smooth",
                                               "layer": 4,
@@ -4158,7 +4158,9 @@
                                       }
                                     },
                                     {
-                                      "markdown_panel@common_store.offer_price_markdown_panel": {}
+                                      "markdown_panel@common_store.offer_price_markdown_panel": {
+                                        "$offer_price_offset": [ 0, 2 ]
+                                      }
                                     },
                                     {
                                       "padding_markdown_panel_right": {
@@ -4179,7 +4181,7 @@
                                         "type": "label",
                                         "color": "$coin_color",
                                         "size": [ "default", 10 ],
-                                        "offset": [ 0, 0.5 ],
+                                        "offset": [ 0, 1.5 ],
                                         "text": "#offer_prompt_text",
                                         "font_type": "smooth",
                                         "layer": 4,

@@ -80,7 +80,8 @@
       {
         "panel_indent": {
           "type": "panel",
-          "size": [ "100% - 16px", "100% - 78px" ],
+          // Fit to the hole in dialog_background_hollow_1 exactly
+          "size": [ "100% - 16px", "100% - 99px" ],
           "offset": [ 0, 23 ],
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",

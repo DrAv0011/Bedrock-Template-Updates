@@ -4,7 +4,7 @@
     "description": {
       "identifier": "minecraft:arrow_spell_emitter",
       "basic_render_parameters": {
-        "material": "particles_blend",
+        "material": "particles_alpha",
         "texture": "textures/particle/particles"
       }
     },

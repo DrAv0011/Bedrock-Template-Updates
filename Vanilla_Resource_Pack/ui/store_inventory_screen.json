@@ -185,7 +185,8 @@
                                     {
                                       "xbl_sign_in_image": {
                                         "type": "image",
-                                        "size": [ "59%y", 160 ],
+                                        "keep_ratio": false,
+                                        "size": [ "93%y", 160 ],
                                         "texture": "textures/ui/inventory_warning_xbox"
                                       }
                                     }

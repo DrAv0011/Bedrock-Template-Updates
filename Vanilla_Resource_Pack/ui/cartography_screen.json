@@ -230,10 +230,9 @@
     "anchor_from": "bottom_middle",
     "anchor_to": "top_middle",
     "text": "#text",
-    "size": [ "100%", 20 ],
+    "size": [ "100%", 10 ],
     "text_alignment": "center",
     "color": "$title_text_color",
-    "offset": [ 0, -8 ],
 
     "bindings": [
       {
@@ -245,7 +244,7 @@
 
   "main_panel": {
     "type": "panel",
-    "size": [ 162, 83 ],
+    "size": [ 162, "100%cm" ],
     "controls": [
       {
         "input_slots@cartography.input_slots": {
@@ -265,10 +264,6 @@
         "map_image_panel@cartography.map_image_panel": {
           "anchor_from": "center",
           "anchor_to": "center"
-        }
-      },
-      {
-        "output_description_label@cartography.output_description_label": {
         }
       },
       {
@@ -303,12 +298,12 @@
     "type": "stack_panel",
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
-    "size": [ "100% - 12px", 144 ],
+    "size": [ "100% - 12px", "100% - 90px" ],
     "controls": [
       {
         "padding1": {
           "type": "panel",
-          "size": [ "100%", 7 ]
+          "size": [ "100%", 6 ]
         }
       },
       {
@@ -326,7 +321,7 @@
       {
         "padding2": {
           "type": "panel",
-          "size": [ "100%", 7 ]
+          "size": [ "100%", 4 ]
         }
       },
       {
@@ -340,6 +335,12 @@
         }
       },
       {
+        "padding4": {
+          "type": "panel",
+          "size": [ "100%", "fill" ]
+        }
+      },
+      {
         "main_panel_wrap": {
           "type": "panel",
           "size": [ "100%", "100%c" ],
@@ -348,6 +349,13 @@
               "main_panel@cartography.main_panel": {}
             }
           ]
+        }
+      },
+      { "output_description_label@cartography.output_description_label": {} },
+      {
+        "padding5": {
+          "type": "panel",
+          "size": [ "100%", "fill" ]
         }
       }
     ]
@@ -365,7 +373,8 @@
       { "selected_item_details_factory@common.selected_item_details_factory": {} },
       {
         "root_panel@common.root_panel": {
-          "size": [ 176, 240 ],
+          "size": [ "100% - 44px", "100%" ],
+          "max_size": [ 176, 220 ],
           "layer": 1,
           "$show_close_button": false,
           "controls": [

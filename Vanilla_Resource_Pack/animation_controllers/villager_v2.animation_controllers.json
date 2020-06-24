@@ -1,12 +1,12 @@
 {
-  "format_version": "1.8.0",
+  "format_version": "1.10.0",
   "animation_controllers": {
     "controller.animation.villager_v2.general": {
       "states": {
         "default": {
           "animations": [
-            { "general": [] },
-            { "look_at_target": [] }
+            "general",
+            { "look_at_target": "!query.is_sleeping" }
           ]
         }
       }
@@ -14,23 +14,15 @@
     "controller.animation.villager_v2.move": {
       "states": {
         "default": {
-          "parameters": [ "query.modified_move_speed" ],
           "animations": [
-            {
-              "move": [
-                {
-                  "0.0": 0.0,
-                  "1.0": 1.0
-                }
-              ]
-            }
+            { "move": "query.modified_move_speed" }
           ],
           "transitions": [
             { "get_in_bed": "query.is_sleeping" }
           ]
         },
         "get_in_bed": {
-          "animations": [ { "get_in_bed": [] } ],
+          "animations": [ "get_in_bed" ],
           "transitions": [
             { "default": "!query.is_sleeping" }
           ]
@@ -43,7 +35,7 @@
           "transitions": [ { "raising": "variable.raise_arms > 0.0" } ]
         },
         "raising": {
-          "animations": [ { "raise_arms": [] } ],
+          "animations": [ "raise_arms" ],
           "transitions": [ { "default": "variable.raise_arms == 0.0" } ]
         }
       }
@@ -51,16 +43,8 @@
     "controller.animation.villager_v2.baby": {
       "states": {
         "baby": {
-          "parameters": [ "query.is_baby" ],
           "animations": [
-            {
-              "baby_transform": [
-                {
-                  "0.0": 0.0,
-                  "1.0": 1.0
-                }
-              ]
-            }
+            { "baby_transform": "query.is_baby" }
           ]
         }
       }
