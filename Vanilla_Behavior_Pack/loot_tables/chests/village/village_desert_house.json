@@ -12,7 +12,13 @@
         },
         {
           "type": "item",
-          "name": "minecraft:green_dye"
+          "functions": [
+            {
+              "function": "set_data",
+              "data": 2
+            }
+          ],
+          "name": "minecraft:dye"
         },
         {
           "type": "item",
@@ -72,7 +78,7 @@
               }
             }
           ],
-          "name": "minecraft:dead_bush"
+          "name": "minecraft:deadbush"
         },
         {
           "type": "item",

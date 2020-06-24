@@ -13,12 +13,20 @@
     "text": "$text_name",
     "layer": 4,
     "shadow": false,
+    "property_bag": {
+      "#tts_dialog_title": "$text_name"
+    },
     "bindings": [
       {
         "binding_type": "$title_text_binding_type",
         "binding_condition": "$title_binding_condition",
         "binding_name": "$text_name",
         "binding_name_override": "$text_name"
+      },
+      {
+        "binding_type": "global",
+        "binding_condition": "once",
+        "binding_name": "#tts_dialog_title"
       }
     ]
   },

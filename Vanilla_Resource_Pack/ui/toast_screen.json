@@ -330,7 +330,8 @@
       }
     },
     "controls": [
-      { "content_log_panel@content_log.content_log_panel": {} }
+      { "content_log_panel@content_log.content_log_panel": {} },
+      { "perf_turtle_panel@perf_turtle.perf_turtle_panel": {} }
     ]
   }
 }

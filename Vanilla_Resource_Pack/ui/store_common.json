@@ -123,7 +123,10 @@
           "color": "$new_offer_icon_text_color",
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
-          "layer": 1
+          "layer": 1,          
+          "tts_name": "accessibility.store.tag",
+          "tts_control_type_order_priority": 1002, // To be read after the button control type
+          "tts_value_order_priority": 1001
         }
       }
     ]
@@ -131,7 +134,8 @@
 
   "new_offer_icon@common_store.tag": {
     "$tag_texture": "textures/ui/newOffersIcon",
-    "$tag_text": "store.new.icon"
+    "$tag_text": "store.new.icon",
+    "$tag_tts_control_header": "accessibility.start.new"
   },
 
   "beta_icon@common_store.tag": {
@@ -4322,6 +4326,9 @@
                 "layer": 4,
                 "default_control": "",
                 "$pressed_button_name|default": "button.select_offer",
+
+                "tts_inherit_siblings": true,
+
                 "bindings": [
                   {
                     "binding_type": "$offer_collection_details",
@@ -5291,6 +5298,8 @@
           "$text_edit_box_placeholder_content_binding_name": "#place_holder_text",
           "$text_edit_box_placeholder_binding_condition": "visibility_changed",
           "$enabled": true,
+
+          "$text_box_tts_name": "",
 
           // focus
           "$focus_override_down": "#search_results_close_focus_id",

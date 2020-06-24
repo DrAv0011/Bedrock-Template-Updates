@@ -123,13 +123,14 @@
           "$pressed_button_name": "$button_action",
           "$focus_id": "$interact_button_id",
           "$action_button_enabled_binding|default": "#item_meets_requirements",
+          "$action_button_visible_binding|default": "#action_button_visible",
           "bindings": [
             {
               "binding_name": "$action_button_enabled_binding",
               "binding_name_override": "#enabled"
             },
             {
-              "binding_name": "#action_button_visible",
+              "binding_name": "$action_button_visible_binding",
               "binding_name_override": "#visible"
             }
           ],
@@ -291,6 +292,7 @@
     "orientation": "horizontal",
     "$button_action|default": "button.defaultNoAction",
     "$interact_button_id|default": "interact_button",
+    "$purchase_button_visible|default": "#purchase_panel_visible",
     "$is_purchase_button": true,
     "variables": [
       {
@@ -348,7 +350,7 @@
     ],
     "bindings": [
       {
-        "binding_name": "#purchase_panel_visible",
+        "binding_name": "$purchase_button_visible",
         "binding_name_override": "#visible"
       },
       {
@@ -1957,6 +1959,8 @@
                     "ratings_interact@mashup.interaction_button_panel": {
                       "$button_text_bind_name": "#ratings_button_text",
                       "$button_action": "button.rateContent",
+                      "$action_button_visible_binding": "#ratings_button_visible",
+                      "$purchase_button_visible": "#rating_section_purchase_button_visible",
                       "$focus_override_left": "FOCUS_OVERRIDE_STOP",
                       "$focus_override_right": "FOCUS_OVERRIDE_STOP",
                       "$focus_override_down": "FOCUS_OVERRIDE_STOP",
@@ -2850,7 +2854,7 @@
           "size": [ "100%", "100%c" ],
           "controls": [
             {
-              "author_label": {
+              "legal_text_label": {
                 "type": "label",
                 "size": [ "100% - 2px", "default" ],
                 "offset": [ 2, -1 ],

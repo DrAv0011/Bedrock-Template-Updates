@@ -139,7 +139,9 @@
                 "$slider_steps_binding_name": "#content_tier_steps",
 
                 "$slider_enabled_binding_type": "global",
-                "$slider_enabled_binding_name": "#has_content_tiering"
+                "$slider_enabled_binding_name": "#has_content_tiering",
+
+                "$slider_tts_text_value": "#content_tier_slider_text_value"
               }
             }
           ]

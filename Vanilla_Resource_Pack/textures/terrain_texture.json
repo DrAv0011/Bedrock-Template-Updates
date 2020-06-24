@@ -2401,13 +2401,22 @@
       "textures": "textures/blocks/fletcher_table_side2"
     },
     "barrel_top": {
-      "textures": "textures/blocks/barrel_top"
+      "textures": [
+        "textures/blocks/barrel_top",
+        "textures/blocks/barrel_top_open"
+      ]
     },
     "barrel_bottom": {
-      "textures": "textures/blocks/barrel_bottom"
+      "textures": [
+        "textures/blocks/barrel_bottom",
+        "textures/blocks/barrel_bottom"
+      ]
     },
     "barrel_side": {
-      "textures": "textures/blocks/barrel_side"
+      "textures": [
+        "textures/blocks/barrel_side",
+        "textures/blocks/barrel_side"
+      ]
     },
     "smithing_table_bottom": {
       "textures": "textures/blocks/smithing_table_bottom"
@@ -2420,6 +2429,14 @@
     },
     "smithing_table_top": {
       "textures": "textures/blocks/smithing_table_top"
+    },
+    "smoker": {
+      "textures": [
+        "textures/blocks/smoker_front_off",
+        "textures/blocks/smoker_front_on",
+        "textures/blocks/smoker_side",
+        "textures/blocks/smoker_top"
+      ]
     },
     "smoker_front_off": {
       "textures": "textures/blocks/smoker_front_off"
@@ -2466,10 +2483,16 @@
       "textures": "textures/blocks/blast_furnace_front_on"
     },
     "blast_furnace_top": {
-      "textures": "textures/blocks/blast_furnace_top"
+      "textures": [
+        "textures/blocks/blast_furnace_top",
+        "textures/blocks/blast_furnace_top"
+      ]
     },
     "blast_furnace_side": {
-      "textures": "textures/blocks/blast_furnace_side"
+      "textures": [
+        "textures/blocks/blast_furnace_side",
+        "textures/blocks/blast_furnace_side"
+      ]
     },
     "lantern": {
       "textures": "textures/blocks/lantern"
@@ -2480,14 +2503,11 @@
     "campfire_fire": {
       "textures": "textures/blocks/campfire"
     },
-    "campfire_top": {
-      "textures": "textures/blocks/campfire_top"
+    "campfire_log": {
+      "textures": "textures/blocks/campfire_log"
     },
-    "campfire_top_on": {
-      "textures": "textures/blocks/campfire_top_on"
-    },
-    "campfire_side": {
-      "textures": "textures/blocks/campfire_side"
+    "campfire_log_lit": {
+      "textures": "textures/blocks/campfire_log_lit"
     },
     "loom_top": {
       "textures": "textures/blocks/loom_top"

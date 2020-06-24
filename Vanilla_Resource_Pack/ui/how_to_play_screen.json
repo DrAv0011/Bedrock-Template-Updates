@@ -107,33 +107,34 @@
             { "mounts_button@how_to_play.mounts_button": { "$toggle_group_forced_index": 39 } },
             { "nether_portals_button@how_to_play.nether_portals_button": { "$toggle_group_forced_index": 40 } },
             { "pets_button@how_to_play.pets_button": { "$toggle_group_forced_index": 41 } },
-            { "ranching_button@how_to_play.ranching_button": { "$toggle_group_forced_index": 42 } },
-            { "scaffolding_button@how_to_play.scaffolding_button": { "$toggle_group_forced_index": 43 } },
-            { "transportation_button@how_to_play.transportation_button": { "$toggle_group_forced_index": 44 } },
-            { "trading_button@how_to_play.trading_button": { "$toggle_group_forced_index": 45 } },
+            { "raids_button@how_to_play.raids_button": { "$toggle_group_forced_index": 42 } },
+            { "ranching_button@how_to_play.ranching_button": { "$toggle_group_forced_index": 43 } },
+            { "scaffolding_button@how_to_play.scaffolding_button": { "$toggle_group_forced_index": 44 } },
+            { "transportation_button@how_to_play.transportation_button": { "$toggle_group_forced_index": 45 } },
+            { "trading_button@how_to_play.trading_button": { "$toggle_group_forced_index": 46 } },
 
             { "options_and_cheats_category@how_to_play_common.topic_category": { "$category": "optionsAndCheats" } },
-            { "game_settings_button@how_to_play.game_settings_button": { "$toggle_group_forced_index": 46 } },
-            { "difficulty_button@how_to_play.difficulty_button": { "$toggle_group_forced_index": 47 } },
-            { "adventure_mode_button@how_to_play.adventure_mode_button": { "$toggle_group_forced_index": 48 } },
-            { "creative_mode_button@how_to_play.creative_mode_button": { "$toggle_group_forced_index": 49 } },
-            { "commands_button@how_to_play.commands_button": { "$toggle_group_forced_index": 50 } },
-            { "host_and_player_options_button@how_to_play.host_and_player_options_button": { "$toggle_group_forced_index": 51 } },
-            { "command_blocks_button@how_to_play.command_blocks_button": { "$toggle_group_forced_index": 52 } },
+            { "game_settings_button@how_to_play.game_settings_button": { "$toggle_group_forced_index": 47 } },
+            { "difficulty_button@how_to_play.difficulty_button": { "$toggle_group_forced_index": 48 } },
+            { "adventure_mode_button@how_to_play.adventure_mode_button": { "$toggle_group_forced_index": 49 } },
+            { "creative_mode_button@how_to_play.creative_mode_button": { "$toggle_group_forced_index": 50 } },
+            { "commands_button@how_to_play.commands_button": { "$toggle_group_forced_index": 51 } },
+            { "host_and_player_options_button@how_to_play.host_and_player_options_button": { "$toggle_group_forced_index": 52 } },
+            { "command_blocks_button@how_to_play.command_blocks_button": { "$toggle_group_forced_index": 53 } },
 
             { "engineering_category@how_to_play_common.topic_category": { "$category": "engineering" } },
-            { "redstone_button@how_to_play.redstone_button": { "$toggle_group_forced_index": 53 } },
-            { "hoppers_button@how_to_play.hoppers_button": { "$toggle_group_forced_index": 54 } },
-            { "droppers_button@how_to_play.droppers_button": { "$toggle_group_forced_index": 55 } },
-            { "dispensers_button@how_to_play.dispensers_button": { "$toggle_group_forced_index": 56 } },
-            { "jukebox_button@how_to_play.jukebox_button": { "$toggle_group_forced_index": 57 } },
+            { "redstone_button@how_to_play.redstone_button": { "$toggle_group_forced_index": 54 } },
+            { "hoppers_button@how_to_play.hoppers_button": { "$toggle_group_forced_index": 55 } },
+            { "droppers_button@how_to_play.droppers_button": { "$toggle_group_forced_index": 56 } },
+            { "dispensers_button@how_to_play.dispensers_button": { "$toggle_group_forced_index": 57 } },
+            { "jukebox_button@how_to_play.jukebox_button": { "$toggle_group_forced_index": 58 } },
 
             { "the_end_category@how_to_play_common.topic_category": { "$category": "theEnd" } },
-            { "eye_of_ender_button@how_to_play.eye_of_ender_button": { "$toggle_group_forced_index": 58 } },
-            { "the_end_button@how_to_play.the_end_button": { "$toggle_group_forced_index": 59 } },
-            { "end_cities_button@how_to_play.end_cities_button": { "$toggle_group_forced_index": 60 } },
-            { "elytra_button@how_to_play.elytra_button": { "$toggle_group_forced_index": 61 } },
-            { "shulker_boxes_button@how_to_play.shulker_boxes_button": { "$toggle_group_forced_index": 62 } },
+            { "eye_of_ender_button@how_to_play.eye_of_ender_button": { "$toggle_group_forced_index": 59 } },
+            { "the_end_button@how_to_play.the_end_button": { "$toggle_group_forced_index": 60 } },
+            { "end_cities_button@how_to_play.end_cities_button": { "$toggle_group_forced_index": 61 } },
+            { "elytra_button@how_to_play.elytra_button": { "$toggle_group_forced_index": 62 } },
+            { "shulker_boxes_button@how_to_play.shulker_boxes_button": { "$toggle_group_forced_index": 63 } },
 
             {
               "enhanced_play_category@how_to_play_common.topic_category": {
@@ -143,13 +144,13 @@
             },
             {
               "multiplayer_button@how_to_play.multiplayer_button": {
-                "$toggle_group_forced_index": 63,
+                "$toggle_group_forced_index": 64,
                 "ignored": "$education_edition"
               }
             },
             {
               "realms_button@how_to_play.realms_button": {
-                "$toggle_group_forced_index": 64,
+                "$toggle_group_forced_index": 65,
                 "ignored": "($education_edition or (not $is_realms_enabled and $nx_os))",
                 "bindings": [
                   {
@@ -161,19 +162,19 @@
             },
             {
               "servers_button@how_to_play.servers_button": {
-                "$toggle_group_forced_index": 65,
+                "$toggle_group_forced_index": 66,
                 "ignored": "($education_edition or ($ignore_3rd_party_servers and $nx_os))"
               }
             },
             {
               "the_store_button@how_to_play.the_store_button": {
-                "$toggle_group_forced_index": 66,
+                "$toggle_group_forced_index": 67,
                 "ignored": "$education_edition"
               }
             },
             {
               "resource_and_behavior_packs_button@how_to_play.resource_and_behavior_packs_button": {
-                "$toggle_group_forced_index": 67,
+                "$toggle_group_forced_index": 68,
                 "ignored": "$education_edition"
               }
             },
@@ -257,6 +258,7 @@
             { "nether_portals_section@how_to_play.nether_portals_section": {} },
             { "nightfall_section@how_to_play.nightfall_section": {} },
             { "pets_section@how_to_play.pets_section": {} },
+            { "raids_section@how_to_play.raids_section": {} },
             { "ranching_section@how_to_play.ranching_section": {} },
             { "realms_section@how_to_play.realms_section": { "ignored": "($education_edition or (not $is_realms_enabled and $nx_os))" } },
             { "redstone_section@how_to_play.redstone_section": {} },
@@ -3379,13 +3381,13 @@
           "$text": "howtoplay.mounts.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "paragraph_2@how_to_play_common.paragraph": {
           "$text": "howtoplay.mounts.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.mounts.header.1"
@@ -3401,13 +3403,13 @@
           "$text": "howtoplay.mounts.text.3.touch"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "paragraph_4@how_to_play_common.paragraph": {
           "$text": "howtoplay.mounts.text.4"
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "header_2@how_to_play_common.header": {
           "$text": "howtoplay.mounts.header.2"
@@ -3418,25 +3420,25 @@
           "$text": "howtoplay.mounts.text.5"
         }
       },
-      { "padding_5@how_to_play_common.padding": { } },
+      { "padding_5@how_to_play_common.padding": {} },
       {
         "paragraph_6@how_to_play_common.paragraph": {
           "$text": "howtoplay.mounts.text.6"
         }
       },
-      { "padding_6@how_to_play_common.padding": { } },
+      { "padding_6@how_to_play_common.padding": {} },
       {
         "paragraph_7@how_to_play_common.paragraph": {
           "$text": "howtoplay.mounts.text.7"
         }
       },
-      { "padding_7@how_to_play_common.padding": { } },
+      { "padding_7@how_to_play_common.padding": {} },
       {
         "paragraph_8@how_to_play_common.paragraph": {
           "$text": "howtoplay.mounts.text.8"
         }
       },
-      { "padding_8@how_to_play_common.padding": { } },
+      { "padding_8@how_to_play_common.padding": {} },
       {
         "header_3@how_to_play_common.header": {
           "$text": "howtoplay.mounts.header.3"
@@ -3447,25 +3449,25 @@
           "$text": "howtoplay.mounts.text.9"
         }
       },
-      { "padding_9@how_to_play_common.padding": { } },
+      { "padding_9@how_to_play_common.padding": {} },
       {
         "paragraph_10@how_to_play_common.paragraph": {
           "$text": "howtoplay.mounts.text.10"
         }
       },
-      { "padding_10@how_to_play_common.padding": { } },
+      { "padding_10@how_to_play_common.padding": {} },
       {
         "paragraph_11@how_to_play_common.paragraph": {
           "$text": "howtoplay.mounts.text.11"
         }
       },
-      { "padding_11@how_to_play_common.padding": { } },
+      { "padding_11@how_to_play_common.padding": {} },
       {
         "paragraph_12@how_to_play_common.paragraph": {
           "$text": "howtoplay.mounts.text.12"
         }
       },
-      { "padding_12@how_to_play_common.padding": { } },
+      { "padding_12@how_to_play_common.padding": {} },
       {
         "header_4@how_to_play_common.header": {
           "$text": "howtoplay.mounts.header.4"
@@ -3476,13 +3478,13 @@
           "$text": "howtoplay.mounts.text.13"
         }
       },
-      { "padding_13@how_to_play_common.padding": { } },
+      { "padding_13@how_to_play_common.padding": {} },
       {
         "paragraph_14@how_to_play_common.paragraph": {
           "$text": "howtoplay.mounts.text.14"
         }
       },
-      { "padding_14@how_to_play_common.padding": { } },
+      { "padding_14@how_to_play_common.padding": {} },
       {
         "header_5@how_to_play_common.header": {
           "$text": "howtoplay.mounts.header.5"
@@ -3520,7 +3522,7 @@
           "$text": "howtoplay.multiplayer.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "splitscreen_only_content_1@how_to_play_common.splitscreen_only_content": {
           "$content": [
@@ -3534,7 +3536,7 @@
                 "$text": "howtoplay.multiplayer.text.2.splitscreen"
               }
             },
-            { "padding_2@how_to_play_common.padding": { } }
+            { "padding_2@how_to_play_common.padding": {} }
           ]
         }
       },
@@ -3593,7 +3595,7 @@
           ]
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "header_3@how_to_play_common.header": {
           "$text": "howtoplay.multiplayer.header.3"
@@ -3613,20 +3615,20 @@
           ]
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "paragraph_5@how_to_play_common.paragraph": {
           "$text": "howtoplay.multiplayer.text.5"
         }
       },
-      { "padding_5@how_to_play_common.padding": { } },
+      { "padding_5@how_to_play_common.padding": {} },
       {
         "paragraph_6@how_to_play_common.paragraph": {
           "$text": "howtoplay.multiplayer.text.6",
           "ignored": "($education_edition or $nx_os)"
         }
       },
-      { "padding_6@how_to_play_common.padding": { } },
+      { "padding_6@how_to_play_common.padding": {} },
       {
         "header_4@how_to_play_common.header": {
           "$text": "howtoplay.multiplayer.header.4"
@@ -3660,13 +3662,13 @@
           "$text": "howtoplay.navigation.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "paragraph_2@how_to_play_common.paragraph": {
           "$text": "howtoplay.navigation.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.navigation.header.1"
@@ -3677,44 +3679,56 @@
           "$text": "howtoplay.navigation.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "paragraph_4@how_to_play_common.paragraph": {
           "$text": "howtoplay.navigation.text.4"
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "paragraph_5@how_to_play_common.paragraph": {
           "$text": "howtoplay.navigation.text.5"
         }
       },
-      { "padding_5@how_to_play_common.padding": { } },
+      { "padding_5@how_to_play_common.padding": {} },
+      {
+        "paragraph_6@how_to_play_common.paragraph": {
+          "$text": "howtoplay.navigation.text.6"
+        }
+      },
+      { "padding_6@how_to_play_common.padding": {} },
+      {
+        "paragraph_7@how_to_play_common.paragraph": {
+          "$text": "howtoplay.navigation.text.7"
+        }
+      },
+      { "padding_7@how_to_play_common.padding": {} },
       {
         "header_2@how_to_play_common.header": {
           "$text": "howtoplay.navigation.header.2"
         }
       },
       {
-        "paragraph_6@how_to_play_common.paragraph": {
-          "$text": "howtoplay.navigation.text.6"
+        "paragraph_8@how_to_play_common.paragraph": {
+          "$text": "howtoplay.navigation.text.8"
         }
       },
-      { "padding_6@how_to_play_common.padding": { } },
+      { "padding_8@how_to_play_common.padding": {} },
       {
-        "paragraph_7@how_to_play_common.paragraph": {
-          "$text": "howtoplay.navigation.text.7"
+        "paragraph_9@how_to_play_common.paragraph": {
+          "$text": "howtoplay.navigation.text.9"
         }
       },
-      { "padding_7@how_to_play_common.padding": { } },
+      { "padding_9@how_to_play_common.padding": {} },
       {
         "header_3@how_to_play_common.header": {
           "$text": "howtoplay.navigation.header.3"
         }
       },
       {
-        "paragraph_8@how_to_play_common.paragraph": {
-          "$text": "howtoplay.navigation.text.8"
+        "paragraph_10@how_to_play_common.paragraph": {
+          "$text": "howtoplay.navigation.text.10"
         }
       }
     ]
@@ -3739,19 +3753,19 @@
           "$text": "howtoplay.netherPortals.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "paragraph_2@how_to_play_common.paragraph": {
           "$text": "howtoplay.netherPortals.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "paragraph_3@how_to_play_common.paragraph": {
           "$text": "howtoplay.netherPortals.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "image_1@how_to_play_common.image": {
           "texture": "textures/ui/NetherPortal",
@@ -3780,7 +3794,7 @@
           "$text": "howtoplay.nightfall.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.nightfall.header.1"
@@ -3791,13 +3805,13 @@
           "$text": "howtoplay.nightfall.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "paragraph_3@how_to_play_common.paragraph": {
           "$text": "howtoplay.nightfall.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "paragraph_4@how_to_play_common.paragraph": {
           "$text": "howtoplay.nightfall.text.4"
@@ -3835,7 +3849,7 @@
           "$text": "howtoplay.pets.text.1.touch"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "header_2@how_to_play_common.header": {
           "$text": "howtoplay.pets.header.2"
@@ -3846,7 +3860,7 @@
           "$text": "howtoplay.pets.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "header_3@how_to_play_common.header": {
           "$text": "howtoplay.pets.header.3"
@@ -3857,7 +3871,7 @@
           "$text": "howtoplay.pets.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "header_4@how_to_play_common.header": {
           "$text": "howtoplay.pets.header.4"
@@ -3866,6 +3880,45 @@
       {
         "paragraph_4@how_to_play_common.paragraph": {
           "$text": "howtoplay.pets.text.4"
+        }
+      }
+    ]
+  },
+
+  "raids_button@how_to_play_common.section_toggle_button": {
+    "$section_topic": "raids"
+  },
+
+  "raids_section@how_to_play_common.main_sections": {
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "raids_button_toggle",
+        "source_property_name": "#toggle_state",
+        "target_property_name": "#visible"
+      }
+    ],
+    "controls": [
+      {
+        "paragraph_1@how_to_play_common.paragraph": {
+          "$text": "howtoplay.raids.text.1"
+        }
+      },
+      { "padding_1@how_to_play_common.padding": {} },
+      {
+        "paragraph_2@how_to_play_common.paragraph": {
+          "$text": "howtoplay.raids.text.2"
+        }
+      },
+      { "padding_2@how_to_play_common.padding": {} },
+      {
+        "header_1@how_to_play_common.header": {
+          "$text": "howtoplay.raids.header.1"
+        }
+      },
+      {
+        "paragraph_3@how_to_play_common.paragraph": {
+          "$text": "howtoplay.raids.text.3"
         }
       }
     ]
@@ -3890,7 +3943,7 @@
           "$text": "howtoplay.ranching.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.ranching.header.1"
@@ -3901,13 +3954,13 @@
           "$text": "howtoplay.ranching.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "paragraph_3@how_to_play_common.paragraph": {
           "$text": "howtoplay.ranching.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "header_2@how_to_play_common.header": {
           "$text": "howtoplay.ranching.header.2"
@@ -3918,7 +3971,7 @@
           "$text": "howtoplay.ranching.text.4"
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "paragraph_5@how_to_play_common.paragraph": {
           "$text": "howtoplay.ranching.text.5"
@@ -3946,7 +3999,7 @@
           "$text": "howtoplay.realms.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.realms.header.1"
@@ -3957,7 +4010,7 @@
           "$text": "howtoplay.realms.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "header_2@how_to_play_common.header": {
           "$text": "howtoplay.realms.header.2"
@@ -3968,19 +4021,19 @@
           "$text": "howtoplay.realms.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "paragraph_4@how_to_play_common.paragraph": {
           "$text": "howtoplay.realms.text.4"
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "paragraph_5@how_to_play_common.paragraph": {
           "$text": "howtoplay.realms.text.5"
         }
       },
-      { "padding_5@how_to_play_common.padding": { } },
+      { "padding_5@how_to_play_common.padding": {} },
       {
         "paragraph_6@how_to_play_common.paragraph": {
           "$text": "howtoplay.realms.text.6"
@@ -4008,7 +4061,7 @@
           "$text": "howtoplay.redstone.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.redstone.header.1"
@@ -4019,19 +4072,19 @@
           "$text": "howtoplay.redstone.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "paragraph_3@how_to_play_common.paragraph": {
           "$text": "howtoplay.redstone.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "paragraph_4@how_to_play_common.paragraph": {
           "$text": "howtoplay.redstone.text.4"
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "paragraph_5@how_to_play_common.paragraph": {
           "$text": "howtoplay.redstone.text.5"
@@ -4059,7 +4112,7 @@
           "$text": "howtoplay.resourceAndBehaviorPacks.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "paragraph_2@how_to_play_common.paragraph": {
           "$text": "howtoplay.resourceAndBehaviorPacks.text.2"
@@ -4129,6 +4182,7 @@
           "size": [ "100%", "250px" ]
         }
       },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "header_3@how_to_play_common.header": {
           "$text": "howtoplay.scaffolding.header.3"
@@ -4139,7 +4193,7 @@
           "$text": "howtoplay.scaffolding.text.3"
         }
       },
-      { "padding_2@how_to_play_common.padding": {} }
+      { "padding_3@how_to_play_common.padding": {} }
     ]
   },
 
@@ -4206,13 +4260,13 @@
           "$text": "howtoplay.theEnd.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "paragraph_2@how_to_play_common.paragraph": {
           "$text": "howtoplay.theEnd.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.theEnd.header.1"
@@ -4223,13 +4277,13 @@
           "$text": "howtoplay.theEnd.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "paragraph_4@how_to_play_common.paragraph": {
           "$text": "howtoplay.theEnd.text.4"
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "paragraph_5@how_to_play_common.paragraph": {
           "$text": "howtoplay.theEnd.text.5"
@@ -4257,7 +4311,7 @@
           "$text": "howtoplay.theStore.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.theStore.header.1"
@@ -4268,13 +4322,13 @@
           "$text": "howtoplay.theStore.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "paragraph_3@how_to_play_common.paragraph": {
           "$text": "howtoplay.theStore.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "paragraph_4@how_to_play_common.paragraph": {
           "variables": [
@@ -4289,7 +4343,7 @@
           ]
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "paragraph_5@how_to_play_common.paragraph": {
           "variables": [
@@ -4326,13 +4380,13 @@
           "$text": "howtoplay.tools.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "paragraph_2@how_to_play_common.paragraph": {
           "$text": "howtoplay.tools.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.tools.header.1"
@@ -4343,13 +4397,13 @@
           "$text": "howtoplay.tools.text.3"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "paragraph_4@how_to_play_common.paragraph": {
           "$text": "howtoplay.tools.text.4"
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "paragraph_5_not_touch@how_to_play_common.paragraph_not_touch": {
           "$text": "howtoplay.tools.text.5.notTouch"
@@ -4360,7 +4414,7 @@
           "$text": "howtoplay.tools.text.5.touch"
         }
       },
-      { "padding_5@how_to_play_common.padding": { } },
+      { "padding_5@how_to_play_common.padding": {} },
       {
         "paragraph_6_not_touch@how_to_play_common.paragraph_not_touch": {
           "$text": "howtoplay.tools.text.6.notTouch"
@@ -4371,13 +4425,13 @@
           "$text": "howtoplay.tools.text.6.touch"
         }
       },
-      { "padding_6@how_to_play_common.padding": { } },
+      { "padding_6@how_to_play_common.padding": {} },
       {
         "paragraph_7@how_to_play_common.paragraph": {
           "$text": "howtoplay.tools.text.7"
         }
       },
-      { "padding_7@how_to_play_common.padding": { } },
+      { "padding_7@how_to_play_common.padding": {} },
       {
         "header_2@how_to_play_common.header": {
           "$text": "howtoplay.tools.header.2"
@@ -4388,25 +4442,25 @@
           "$text": "howtoplay.tools.text.8"
         }
       },
-      { "padding_8@how_to_play_common.padding": { } },
+      { "padding_8@how_to_play_common.padding": {} },
       {
         "paragraph_9@how_to_play_common.paragraph": {
           "$text": "howtoplay.tools.text.9"
         }
       },
-      { "padding_9@how_to_play_common.padding": { } },
+      { "padding_9@how_to_play_common.padding": {} },
       {
         "paragraph_10@how_to_play_common.paragraph": {
           "$text": "howtoplay.tools.text.10"
         }
       },
-      { "padding_10@how_to_play_common.padding": { } },
+      { "padding_10@how_to_play_common.padding": {} },
       {
         "paragraph_11@how_to_play_common.paragraph": {
           "$text": "howtoplay.tools.text.11"
         }
       },
-      { "padding_11@how_to_play_common.padding": { } },
+      { "padding_11@how_to_play_common.padding": {} },
       {
         "paragraph_12@how_to_play_common.paragraph": {
           "$text": "howtoplay.tools.text.12"
@@ -4434,7 +4488,7 @@
           "$text": "howtoplay.trading.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.trading.header.1"
@@ -4445,10 +4499,16 @@
           "$text": "howtoplay.trading.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "paragraph_3@how_to_play_common.paragraph": {
           "$text": "howtoplay.trading.text.3"
+        }
+      },
+      { "padding_3@how_to_play_common.padding": {} },
+      {
+        "paragraph_4@how_to_play_common.paragraph": {
+          "$text": "howtoplay.trading.text.4"
         }
       }
     ]
@@ -4473,7 +4533,7 @@
           "$text": "howtoplay.transportation.text.1"
         }
       },
-      { "padding_1@how_to_play_common.padding": { } },
+      { "padding_1@how_to_play_common.padding": {} },
       {
         "header_1@how_to_play_common.header": {
           "$text": "howtoplay.transportation.header.1"
@@ -4484,7 +4544,7 @@
           "$text": "howtoplay.transportation.text.2"
         }
       },
-      { "padding_2@how_to_play_common.padding": { } },
+      { "padding_2@how_to_play_common.padding": {} },
       {
         "paragraph_3_keyboard@how_to_play_common.paragraph_keyboard": {
           "$text": "howtoplay.transportation.text.3.keyboard"
@@ -4500,7 +4560,7 @@
           "$text": "howtoplay.transportation.text.3.touch"
         }
       },
-      { "padding_3@how_to_play_common.padding": { } },
+      { "padding_3@how_to_play_common.padding": {} },
       {
         "header_2@how_to_play_common.header": {
           "$text": "howtoplay.transportation.header.2"
@@ -4511,7 +4571,7 @@
           "$text": "howtoplay.transportation.text.4"
         }
       },
-      { "padding_4@how_to_play_common.padding": { } },
+      { "padding_4@how_to_play_common.padding": {} },
       {
         "paragraph_5_keyboard@how_to_play_common.paragraph_keyboard": {
           "$text": "howtoplay.transportation.text.5.keyboard"

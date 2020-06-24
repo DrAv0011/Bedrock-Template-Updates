@@ -532,7 +532,7 @@
     "easing": "in_quart",
     "destroy_at_end": "chat_grid_item",
     "duration": 1,
-    "from": 0.5,
+    "from": 0.7,
     "to": 0
   },
 
@@ -578,7 +578,7 @@
         "chat_background": {
           "type": "image",
           "texture": "textures/ui/Black",
-          "alpha": 0.5,
+          "alpha": 0.7,
           "size": [ "100%", "100%c" ],
           "anims": [
             "@hud.anim_chat_bg_wait"
