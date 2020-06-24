@@ -47,7 +47,9 @@
         }
       },
       {
-        "tab_content_description_panel@day_one_experience_intro.label_panel": {
+        "tab_content_description_panel@common.tts_label_focus_wrapper": {
+          "$tts_label_panel": "day_one_experience_intro.label_panel",
+          "$focus_border_size": [ "100% + 20px", "100% + 14px" ],
           "size": [ "90%", "100%" ],
           "$text_color": "$body_text_color",
           "$text": "$description_text",
@@ -109,7 +111,9 @@
     "$toggle_name": "navigation_tab",
     "$toggle_reset_on_focus_lost": false,
     "$toggle_group_default_selected": "$default_tab",
-    "$background_texture": "textures/ui/Black"
+    "$background_texture": "textures/ui/Black",
+    "$toggle_tts_toggle_on_text": "accessibility.state.selected",
+    "$toggle_tts_toggle_off_text": ""
   },
 
   //---------------------------------------------------------------------------
@@ -156,7 +160,8 @@
           "$toggle_group_forced_index": 0,
           "$radio_toggle_group": true,
           "$texture": "textures/ui/day_one_carousel_logo_thumb",
-          "$tab_panel": "day_one_experience_intro.image_panel"
+          "$tab_panel": "day_one_experience_intro.image_panel",
+          "$top_tab_tts_name": "$tab_tts_name_welcome"
         }
       },
       {
@@ -169,7 +174,8 @@
           "$toggle_group_forced_index": 1,
           "$radio_toggle_group": true,
           "$texture": "textures/ui/day_one_carousel_marketplace_thumb",
-          "$tab_panel": "day_one_experience_intro.image_panel"
+          "$tab_panel": "day_one_experience_intro.image_panel",
+          "$top_tab_tts_name": "$tab_tts_name_marketplace"
         }
       },
       {
@@ -182,7 +188,8 @@
           "$toggle_group_forced_index": 2,
           "$radio_toggle_group": true,
           "$texture": "textures/ui/day_one_carousel_cross_platform_thumb",
-          "$tab_panel": "day_one_experience_intro.image_panel"
+          "$tab_panel": "day_one_experience_intro.image_panel",
+          "$top_tab_tts_name": "$tab_tts_name_cross_platform"
         }
       },
       {
@@ -196,7 +203,8 @@
           "$radio_toggle_group": true,
           "$texture": "textures/ui/day_one_carousel_realms_thumb",
           "$tab_panel": "day_one_experience_intro.image_panel",
-          "ignored": "(not $is_realms_enabled)"
+          "ignored": "(not $is_realms_enabled)",
+          "$top_tab_tts_name": "$tab_tts_name_realms"
         }
       },
       {
@@ -211,7 +219,8 @@
           "$toggle_group_forced_index": 4,
           "$radio_toggle_group": true,
           "$texture": "textures/ui/day_one_carousel_villager_thumb",
-          "$tab_panel": "day_one_experience_intro.image_panel"
+          "$tab_panel": "day_one_experience_intro.image_panel",
+          "$top_tab_tts_name": "$tab_tts_name_villagers"
         }
       },
       {
@@ -429,23 +438,24 @@
       },
       {
         "tab_navigation_panel@day_one_experience_intro.tabbed_tab_navigation_panel_layout": {
-          "size": [ "100%", "18%" ]
+          "size": [ "100%", "18%" ],
+          "ttsSectionContainer": true
         }
       },
       {
         "tab_content_panel@day_one_experience_intro.tabbed_tab_content_panel_layout": {
-          "size": [ "100%", "fill" ]
+          "size": [ "100%", "fill" ],
+          "ttsSectionContainer": true
         }
       },
       {
-        "padding_4@day_one_experience_intro.padding_vertical": {
-          "size": ["100%", 16]
-        }
+        "padding_4@day_one_experience_intro.padding_vertical": {}
       },
       {
         "continue_button_panel": {
           "type": "panel",
           "size": [ "100%", "fill" ],
+          "ttsSectionContainer": true,
           "controls": [
             {
               "continue_button@common_buttons.light_text_button": {
