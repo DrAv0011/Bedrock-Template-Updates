@@ -282,7 +282,6 @@
       }
     ]
   },
-
   "purchase_buttons_panel": {
     "type": "stack_panel",
     "layer": 3,
@@ -302,7 +301,6 @@
     ],
     "controls": [
       {
-        // used in currency purchase treatment - don't rename until the AB test is done
         "purchase_with_coins_button@common_buttons.light_content_button": {
           "type": "button",
           "size": [ "fill", "100%" ],
@@ -312,6 +310,39 @@
           "$focus_id": "$interact_button_id",
           "$button_content": "mashup.large_button_coin_purchase_label",
           "$is_purchase_button": true
+        }
+      },
+      {
+        "purchase_currency_button_panel": {
+          "type": "panel",
+          "$button_size_override|default": [ "50%", "100%" ],
+          "size": "$button_size_override",
+          "bindings": [
+            {
+              "binding_name": "#currency_purchase_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "variables": [
+            {
+              "requires": "#expand_purchase_button",
+              "$button_size_override": [ "50%", "100%" ]
+            }
+          ],
+          "controls": [
+            {
+              "purchase_with_currency_button@common_buttons.light_content_button": {
+                "type": "button",
+                "size": [ "100%", "100%" ],
+                "$button_focus_precedence": 10,
+                "$pressed_button_name": "$button_action",
+                "$button_action": "button.purchase_with_currency",
+                "$focus_id": "$interact_button_id",
+                "$button_size_override": [ "100% - 2px", "100%" ],
+                "$button_content": "mashup.currency_purchase_label"
+              }
+            }
+          ]
         }
       }
     ],
@@ -446,7 +477,6 @@
 
     "controls": [
       {
-        // used in currency purchase treatment - don't rename until the AB test is done
         "smooth_purchase_with_coins_button@common_buttons.light_content_form_fitting_button": {
           "type": "button",
           "$button_size_override": [ "100%c", "100%" ],
@@ -460,6 +490,48 @@
           "$focus_id": "$interact_button_id",
           "$button_content": "mashup.smooth_coin_purchase_label_formfitting",
           "$is_purchase_button": true
+        }
+      },
+      {
+        "pad_h1@mashup.horizontal_padding_2px": {
+          "size": [ 2, "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#currency_purchase_visible",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "purchase_currency_button_panel": {
+          "type": "panel",
+          "size": [ "100%c", "100%" ],
+          "bindings": [
+            {
+              "binding_name": "#currency_purchase_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "controls": [
+            {
+              "purchase_with_currency_button@common_buttons.light_content_form_fitting_button": {
+                "type": "button",
+                "size": [ "100%c", "100%" ],
+                "$button_size_override": [ "100%c", "100%" ],
+                "$focus_border_size_override": [ "100%c + 2px", "100%" ],
+                "$button_image_size_override": [ "100%c + 2px", "100% - 2px" ],
+                "$button_content_size_override": [ "100%c + 6px", "100%" ],
+
+                "$button_focus_precedence": 10,
+                "$pressed_button_name": "$button_action",
+                "$button_action": "button.purchase_with_currency",
+                "$focus_id": "$interact_button_id",
+                "$button_content": "mashup.currency_purchase_label"
+
+              }
+            }
+          ]
         }
       }
     ],
@@ -511,12 +583,14 @@
 
   "currency_purchase_label": {
     "type": "panel",
+    "size": [ "100%c", "100%" ],
     "controls": [
       {
         "currency_purchase_label_text": {
           "type": "label",
           "color": "$light_button_default_text_color",
-          "size": [ "100%", "default" ],
+          "size": [ "default", "100%" ],
+          "offset": [ -3, 1 ],
           "anchor_from": "center",
           "anchor_to": "center",
           "text_alignment": "center",
@@ -791,7 +865,7 @@
               "markdown_banner@common_store.markdown_background": {
                 "$markdown_label": "mashup.discount_label",
                 "size": [ "100%c", "100%" ],
-                "$banner_size": [ "20px", "100%" ],
+                "$banner_size": [ "26px", "100%" ],
                 "offset": [ -7, -3 ],
                 "$triangle_offset": [ 0, 0 ],
                 "ignored": "(not $default_state)",
@@ -1274,7 +1348,9 @@
       {
         "summary@mashup.summary_content_panel": {
           "$content_name": "#summary_content_visible",
-          "$content_title_bind_name": "#summary_title"
+          "$content_title_bind_name": "#summary_title",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left"
         }
       }
     ]
@@ -2764,6 +2840,37 @@
                 "size": [ "100%", 20 ],
                 "offset": [ 2, 0 ]
               }
+            }
+          ]
+        }
+      },
+      {
+        "disclaimer_panel": {
+          "type": "panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "author_label": {
+                "type": "label",
+                "size": [ "100% - 2px", "default" ],
+                "offset": [ 2, -1 ],
+                "layer": 10,
+                "color": "$body_text_color",
+                "font_type": "smooth",
+                "font_scale_factor": 0.68,
+                "text": "#purchase_with_currency_disclaimer",
+                "bindings": [
+                  {
+                    "binding_name": "#purchase_with_currency_disclaimer"
+                  }
+                ]
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#currency_purchase_visible",
+              "binding_name_override": "#visible"
             }
           ]
         }

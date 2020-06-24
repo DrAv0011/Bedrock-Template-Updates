@@ -1195,12 +1195,6 @@
         "from_button_id": "button.menu_exit",
         "to_button_id": "button.menu_continue",
         "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_vr_realign",
-        "to_button_id": "button.menu_vr_realign",
-        "mapping_type": "global",
-        "scope": "controller"
       }
     ]
   }

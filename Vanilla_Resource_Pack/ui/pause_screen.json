@@ -270,7 +270,7 @@
 
   "feedback_button@pause.pause_button_template": {
     "$pressed_button_name": "button.menu_feedback",
-    "$button_text": "options.group.feedback",
+    "$button_text": "feedbackScreen.button",
     "anchor_to": "top_middle",
     "anchor_from": "top_middle"
   },
@@ -1177,7 +1177,7 @@
     "layer": 10,
     "visible": "($win10_edition and $is_holographic)",
     "controls": [
-      { "gamepad_helper_x@common.gamepad_helper_x": {} }
+      { "gamepad_helper_y@common.gamepad_helper_y": {} }
     ]
   },
 

@@ -38,7 +38,7 @@
   },
 
   "beta_icon@common_store.beta_icon": {
-    "layer": 11, // This is the lowest layer where the button border won't show through this icon while being pressed
+    "layer": 15, // This is the lowest layer where the button border won't show through this icon while being pressed, most notable on ios
     "anchor_from": "top_right",
     "anchor_to": "top_right"
   },
@@ -817,6 +817,7 @@
                   { "library_button@start.library_button": {} },
                   {
                     "beta_icon@start.beta_icon": {
+                      "ignored": "$ios",
                       "offset": [ 8, -6 ]
                     }
                   }

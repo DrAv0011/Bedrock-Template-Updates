@@ -22,7 +22,6 @@
           "color": "$content_toggle_image_color_binding",
           "$content_toggle_image_binding_type|default": "none",
           "$content_toggle_image_binding_condition|default": "none",
-          "$content_toggle_image_binding_type|default": "none",
           "bindings": [
             {
               "binding_name": "$content_toggle_image_color_binding",

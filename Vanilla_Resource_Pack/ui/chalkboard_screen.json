@@ -89,12 +89,6 @@
         "from_button_id": "button.menu_cancel",
         "to_button_id": "button.menu_exit",
         "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_vr_realign",
-        "to_button_id": "button.menu_vr_realign",
-        "mapping_type": "global",
-        "scope": "controller"
       }
     ],
     "$screen_content": "chalkboard.chalkboard_root"

@@ -30,6 +30,21 @@
     "size": [ 16, 17 ]
   },
 
+  "search_bar@common.text_edit_box": {
+    "max_length": 50,
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "size": [ 200, 15 ],
+    "offset": [ -2, 3 ],
+    "layer": 5,
+
+    "$place_holder_text": "store.search.title",
+    "$text_box_name": "search_filter_text",
+    "property_bag": {
+      "#property_field": "#item_name"
+    }
+  },
+
   "learn_more_content": {
     "type": "panel",
     "$learn_more_text|default": "",
@@ -313,7 +328,8 @@
           // Make the input_panel be above the header's back button
           "layer": 201
         }
-      }
+      },
+      { "search_bar@library.search_bar": {} }
     ]
   },
 

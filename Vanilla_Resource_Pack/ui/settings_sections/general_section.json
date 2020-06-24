@@ -47,6 +47,17 @@
         }
       },
       {
+        "signin_controls@settings_common.option_custom_control": {
+          "$control_name": "general_section.signin_controls",
+          "bindings": [
+            {
+              "binding_name": "#not_logged_in",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
         "gamertag_controls@settings_common.option_custom_control": {
           "$show_option_label": false,
           "$control_name": "general_section.gamertag_controls",
@@ -133,7 +144,7 @@
       },
       {
         "clear_msa_token": {
-          "ignored": "(not $nx_os and not $is_pregame)",
+          "ignored": "($education_edition or (not $nx_os and not $is_pregame))",
           "type": "panel",
           "size": [ "100%", 32 ],
           "controls": [
@@ -279,119 +290,119 @@
       },
       {
         "build_info_label_panel": {
-        "type": "stack_panel",
-        "size": [ "100%", "100%c" ],
-             "controls": [
-             {
-                "build_id_label": {
-                    "type": "label",
-                    "color": "$body_text_color",
-                    "offset": [ 2, 0 ],
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    "text": "#build_id",
-                    "bindings": [
-                        {
-                            "binding_name": "#build_id"
-                        }
-                    ]
-                }
-             },
-             {
-                "protocol_version_label": {
-                    "type": "label",
-                    "color": "$body_text_color",
-                    "offset": [ 2, 0 ],
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    "text": "#protocol_version",
-                    "bindings": [
-                        {
-                            "binding_name": "#protocol_version"
-                        }
-                    ]
-                }
+          "type": "stack_panel",
+          "size": [ "100%", "100%c" ],
+          "controls": [
+            {
+              "build_id_label": {
+                "type": "label",
+                "color": "$body_text_color",
+                "offset": [ 2, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#build_id",
+                "bindings": [
+                  {
+                    "binding_name": "#build_id"
+                  }
+                ]
+              }
             },
-             {
-                "device_id_label": {
-                    "type": "label",
-                    "size": [ "100%", "default" ],
-                    "color": "$body_text_color",
-                    "offset": [ 2, 0 ],
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    "text": "#device_id",
-                    "bindings": [
-                        {
-                            "binding_name": "#device_id"
-                        }
-                    ]
-                }
-             },
-             {
-                "MinecraftAccount_id_label": {
-                    "ignored": "(not $new_mcid)",
-                    "type": "label",
-                    "color": "$body_text_color",
-                    "offset": [ 2, 0 ],
-                    "size": [ "100%", "default" ],
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    "text": "#MinecraftAccount_id",
-                    "bindings": [
-                        {
-                            "binding_name": "#MinecraftAccount_id"
-                        }
-                    ]
-                }
-             },
-             {
-                "commerce_id_label": {
-                    "type": "label",
-                    "color": "$body_text_color",
-                    "offset": [ 2, 0 ],
-                    "size": [ "100%", "default" ],
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    "text": "#commerce_id",
-                    "bindings": [
-                        {
-                            "binding_name": "#commerce_id"
-                        }
-                    ]
-                }
-             },
-             {
-                "build_date_label": {
-                    "type": "label",
-                    "color": "$body_text_color",
-                    "offset": [ 2, 0 ],
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    "text": "#build_date",
-                    "bindings": [
-                        {
-                            "binding_name": "#build_date"
-                        }
-                    ]
-                }
-             },
-             {
-                "world_converter_label": {
-                    "type": "label",
-                    "color": "$body_text_color",
-                    "offset": [ 2, 0 ],
-                    "anchor_from": "top_left",
-                    "anchor_to": "top_left",
-                    "text": "#world_conversion_version",
-                    "bindings": [
-                        {
-                            "binding_name": "#world_conversion_version"
-                        }
-                    ]
-                }
-             }
-            ]
+            {
+              "protocol_version_label": {
+                "type": "label",
+                "color": "$body_text_color",
+                "offset": [ 2, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#protocol_version",
+                "bindings": [
+                  {
+                    "binding_name": "#protocol_version"
+                  }
+                ]
+              }
+            },
+            {
+              "device_id_label": {
+                "type": "label",
+                "size": [ "100%", "default" ],
+                "color": "$body_text_color",
+                "offset": [ 2, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#device_id",
+                "bindings": [
+                  {
+                    "binding_name": "#device_id"
+                  }
+                ]
+              }
+            },
+            {
+              "MinecraftAccount_id_label": {
+                "ignored": "(not $new_mcid)",
+                "type": "label",
+                "color": "$body_text_color",
+                "offset": [ 2, 0 ],
+                "size": [ "100%", "default" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#MinecraftAccount_id",
+                "bindings": [
+                  {
+                    "binding_name": "#MinecraftAccount_id"
+                  }
+                ]
+              }
+            },
+            {
+              "commerce_id_label": {
+                "type": "label",
+                "color": "$body_text_color",
+                "offset": [ 2, 0 ],
+                "size": [ "100%", "default" ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#commerce_id",
+                "bindings": [
+                  {
+                    "binding_name": "#commerce_id"
+                  }
+                ]
+              }
+            },
+            {
+              "build_date_label": {
+                "type": "label",
+                "color": "$body_text_color",
+                "offset": [ 2, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#build_date",
+                "bindings": [
+                  {
+                    "binding_name": "#build_date"
+                  }
+                ]
+              }
+            },
+            {
+              "world_converter_label": {
+                "type": "label",
+                "color": "$body_text_color",
+                "offset": [ 2, 0 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "text": "#world_conversion_version",
+                "bindings": [
+                  {
+                    "binding_name": "#world_conversion_version"
+                  }
+                ]
+              }
+            }
+          ]
         }
       }
     ]
@@ -407,7 +418,15 @@
     "$text_box_name": "player_name_text_box",
     "$option_enabled_binding_name": "#player_name_enabled",
     "controls": [
-      { "option_text_edit_control@settings_common.option_text_edit_control": {} },
+      { "option_text_edit_control@settings_common.option_text_edit_control": {} }
+    ]
+  },
+
+  "signin_controls": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%c" ],
+    "controls": [
       {
         "sign_in": {
           "ignored": "(not $is_pregame or not $is_xboxlive_enabled)",
@@ -696,7 +715,7 @@
   "storage_management_button@settings_common.section_toggle_base": {
     "$toggle_view_binding_name": "storage_management_button_toggle",
     "enabled": "(not $trial)",
-    "visible": "(not $education_edition and $is_pregame)",
+    "visible": "$is_pregame",
     "$button_text": "menu.storageManagement",
     "$glyph_texture": "textures/ui/storageIcon",
     "$glyph_color_texture": "textures/ui/storageIconColor",
@@ -1923,7 +1942,7 @@
       {
         "year_month_slash": {
           "type": "label",
-          "size": [ 20, "default" ],
+          "size": [ 16, "default" ],
           "text": " / ",
           "text_alignment": "center",
           "color": "$main_header_text_color"
@@ -1940,7 +1959,7 @@
       {
         "month_day_slash": {
           "type": "label",
-          "size": [ 20, "default" ],
+          "size": [ 16, "default" ],
           "text": " / ",
           "text_alignment": "center",
           "color": "$main_header_text_color"
@@ -1953,6 +1972,89 @@
           "$text_box_name": "dev_date_day_override_text_box",
           "$option_binding_name": "#dev_date_day_override"
         }
+      },
+      {
+        "day_hour_slash": {
+          "type": "label",
+          "size": [ 16, "default" ],
+          "text": " / ",
+          "text_alignment": "center",
+          "color": "$main_header_text_color"
+        }
+      },
+      {
+        "hour_text_box@settings_common.option_text_edit": {
+          "$option_label": "options.dev_overrideDateHour",
+          "$max_text_edit_length": 2,
+          "$text_box_name": "dev_date_hour_override_text_box",
+          "$option_binding_name": "#dev_date_hour_override"
+        }
+      },
+      {
+        "hour_minute_slash": {
+          "type": "label",
+          "size": [ 16, "default" ],
+          "text": " / ",
+          "text_alignment": "center",
+          "color": "$main_header_text_color"
+        }
+      },
+      {
+        "minute_text_box@settings_common.option_text_edit": {
+          "$option_label": "options.dev_overrideDateMinute",
+          "$max_text_edit_length": 2,
+          "$text_box_name": "dev_date_minute_override_text_box",
+          "$option_binding_name": "#dev_date_minute_override"
+        }
+      }
+    ]
+  },
+
+  "timezonetype_dropdown_content@settings_common.option_radio_dropdown_group": {
+    "$radio_buttons": [
+      {
+        "@settings_common.radio_with_label": {
+          "$toggle_state_binding_name": "#timezonetype_radio_local",
+          "$radio_label_text": "options.dev.timeZoneType.local"
+        }
+      },
+      {
+        "@settings_common.radio_with_label": {
+          "$toggle_state_binding_name": "#timezonetype_radio_utc",
+          "$radio_label_text": "options.dev.timeZoneType.utc"
+        }
+      }
+    ]
+  },
+
+  "date_options_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "padding0": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      },
+      {
+        "display_override_datetime_option_toggle@settings_common.option_toggle": {
+          "$option_label": "options.dev_displayOverrideDatetime",
+          "$option_binding_name": "#dev_display_override_datetime",
+          "$option_enabled_binding_name": "#dev_display_override_datetime_enabled",
+          "$toggle_name": "dev_display_override_datetime"
+        }
+      },
+      {
+        "option_toggle_date_override@settings_common.option_toggle": {
+          "$option_label": "options.dev_useOverrideDate",
+          "$option_binding_name": "#dev_use_override_date",
+          "$option_enabled_binding_name": "#dev_use_override_date_enabled",
+          "$toggle_name": "dev_use_override_date"
+        }
+      },
+      {
+        "override_date_options_panel@general_section.override_date_options_panel": {}
       }
     ]
   },
@@ -1971,26 +2073,36 @@
           "$enabled": true,
           "controls": [
             {
-              "display_override_datetime_option_toggle@settings_common.option_toggle": {
-                "$option_label": "options.dev_displayOverrideDatetime",
-                "$option_binding_name": "#dev_display_override_datetime",
-                "$option_enabled_binding_name": "#dev_display_override_datetime_enabled",
-                "$toggle_name": "dev_display_override_datetime"
+              "load_override_date_option_toggle@settings_common.option_toggle": {
+                "$option_label": "options.dev_loadOverrideDate",
+                "$option_binding_name": "#dev_load_override_date",
+                "$option_enabled_binding_name": "#dev_load_override_date_enabled",
+                "$toggle_name": "dev_load_override_date"
               }
             },
             {
-              "save_current_override_date_option_toggle@settings_common.option_toggle": {
-                "$option_label": "options.dev_saveCurrentOverrideDate",
-                "$option_binding_name": "#dev_save_current_override_date",
-                "$option_enabled_binding_name": "#dev_save_current_override_date_enabled",
-                "$toggle_name": "dev_save_current_override_date"
+              "select_dropdown@settings_common.option_dropdown": {
+                "$option_label": "options.dev.timeZoneType",
+                "$dropdown_content": "general_section.timezonetype_dropdown_content",
+                "$dropdown_area": "content_area",
+                "$dropdown_name": "timezonetype_dropdown",
+                "$options_dropdown_toggle_label_binding": "#timezonetype_dropdown_toggle_label",
+                "$option_enabled_binding_name": "#timezonetype_dropdown_enabled",
+                "$dropdown_scroll_content_size": [ "100%", "145%" ]
               }
             },
             { "override_date_panel@general_section.override_date_panel": {} },
             {
+              "padding1": {
+                "type": "panel",
+                "size": [ "100%", 2 ]
+              }
+            },
+            {
               "override_time_scale_option@settings_common.option_text_edit": {
+                "$option_text_edit_control_size": [ "40px", "25px" ],
                 "$option_label": "options.dev_overrideTimeScale",
-                "$option_label_alignment": "center",
+                "$option_label_alignment": "left",
                 "$max_text_edit_length": 5,
                 "$text_box_name": "dev_override_time_scale_text_box",
                 "$option_binding_name": "#dev_override_time_scale",
@@ -1998,27 +2110,13 @@
               }
             },
             {
-              "override_date_button_panel": {
-                "type": "panel",
-                "size": [ "100%", "100%c" ],
-                "controls": [
-                  {
-                    "update_override_date_button@settings_common.action_button": {
-                      "$pressed_button_name": "dev_update_override_date_button",
-                      "$button_text": "options.dev_updateOverrideDate"
-                    }
-                  }
-                ],
-                "bindings": [
-                  {
-                    "binding_name": "#update_override_date_button_visible",
-                    "binding_name_override": "#visible"
-                  }
-                ]
+              "reset_time_button@settings_common.action_button": {
+                "$pressed_button_name": "dev_reset_date_button",
+                "$button_text": "options.dev_resetOverrideDate"
               }
             },
             {
-              "override_date_panel_bottom_padding": {
+              "padding2": {
                 "type": "panel",
                 "size": [ "100%", 4 ]
               }
@@ -2343,6 +2441,78 @@
     "texture": "textures/ui/realms_green_check"
   },
 
+  "debug_select_windows_store_panel": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%c" ],
+    "controls": [
+      {
+        "select_store_dropdown@settings_common.option_dropdown": {
+          "$option_label": "options.dev.windowsStore",
+          "$dropdown_content": "general_section.windows_store_dropdown_content",
+          "$dropdown_area": "content_area",
+          "$dropdown_name": "windows_store_dropdown",
+          "$option_enabled_binding_name": "#select_windows_store_visible",
+          "$options_dropdown_toggle_label_binding": "#windows_store_dropdown_toggle_label",
+          "$dropdown_scroll_content_size": [ "100%", "200%" ]
+        }
+      },
+      {
+        "stores_label": {
+          "type": "label",
+          "offset": [ 3, 0 ],
+          "text_alignment": "left",
+          "color": "$body_text_color",
+          "layer": 1,
+          "text": "options.dev.stores"
+        }
+      },
+      {
+        "sandbox_label": {
+          "type": "label",
+          "offset": [ 3, 0 ],
+          "text_alignment": "left",
+          "color": "$body_text_color",
+          "layer": 1,
+          "text": "#active_stores_label",
+          "bindings": [
+            {
+              "binding_name": "#active_stores_label"
+            }
+          ]
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#select_windows_store_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "windows_store_dropdown_content@settings_common.option_radio_dropdown_group": {
+    "$radio_buttons": [
+      {
+        "@settings_common.radio_with_label": {
+          "$toggle_state_binding_name": "#windows_store_mode_radio_auto",
+          "$radio_label_text": "options.dev.windowsStore.auto"
+        }
+      },
+      {
+        "@settings_common.radio_with_label": {
+          "$toggle_state_binding_name": "#windows_store_mode_radio_v6",
+          "$radio_label_text": "options.dev.windowsStore.v6"
+        }
+      },
+      {
+        "@settings_common.radio_with_label": {
+          "$toggle_state_binding_name": "#windows_store_mode_radio_v8",
+          "$radio_label_text": "options.dev.windowsStore.v8"
+        }
+      }
+    ]
+  },
+
   /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
   // Automation Tab
 
@@ -2644,10 +2814,10 @@
       },
       {
         "option_content_file_log@settings_common.option_toggle": {
-          "$option_label": "options.content_log",
-          "$option_binding_name": "#content_log",
-          "$option_enabled_binding_name": "#content_log_enabled",
-          "$toggle_name": "content_log"
+          "$option_label": "options.content_log_file",
+          "$option_binding_name": "#content_log_file",
+          "$option_enabled_binding_name": "#content_log_file_enabled",
+          "$toggle_name": "content_log_file"
         }
       },
       {
@@ -2709,7 +2879,7 @@
       {
         "option_toggle_game_tip@settings_common.option_toggle": {
           "$option_label": "options.dev_game_tip",
-          "enabled":  "($is_pregame)",
+          "enabled": "($is_pregame)",
           "$option_binding_name": "#dev_game_tip",
           "$option_enabled_binding_name": "#dev_game_tip_enabled",
           "$toggle_name": "dev_game_tip"
@@ -2767,24 +2937,10 @@
         }
       },
       {
-        "date_options_panel": {
-          "type": "stack_panel",
-          "size": [ "100%", "100%c" ],
-          "orientation": "vertical",
-          "controls": [
-            {
-              "option_toggle_date_override@settings_common.option_toggle": {
-                "$option_label": "options.dev_useOverrideDate",
-                "$option_binding_name": "#dev_use_override_date",
-                "$option_enabled_binding_name": "#dev_use_override_date_enabled",
-                "$toggle_name": "dev_use_override_date"
-              }
-            },
-            {
-              "override_date_options_panel@general_section.override_date_options_panel": {}
-            }
-          ]
-        }
+        "select_windows_store_panel@general_section.debug_select_windows_store_panel": {}
+      },
+      {
+        "date_options_panel@general_section.date_options_panel": {}
       },
       {
         "treatment_override_panel": {
@@ -2855,6 +3011,17 @@
           "$dropdown_name": "dev_realms_environment_dropdown",
           "$options_dropdown_toggle_label_binding": "#dev_realms_environment_dropdown_toggle_label",
           "$option_enabled_binding_name": "#dev_realms_environment_dropdown_enabled",
+          "$dropdown_scroll_content_size": [ "100%", "200%" ]
+        }
+      },
+      {
+        "identity_env_dropdown@settings_common.option_dropdown": {
+          "$option_label": "options.dev_identity_environment",
+          "$dropdown_content": "general_section.dev_identity_environment_dropdown_content",
+          "$dropdown_area": "content_area",
+          "$dropdown_name": "dev_identity_env_dropdown",
+          "$options_dropdown_toggle_label_binding": "#dev_identity_env_dropdown_toggle_label",
+          "$option_enabled_binding_name": "#dev_identity_env_dropdown_dropdown_enabled",
           "$dropdown_scroll_content_size": [ "100%", "200%" ]
         }
       },
@@ -3288,6 +3455,28 @@
         "@settings_common.radio_with_label": {
           "$toggle_state_binding_name": "#vsync_adaptive",
           "$radio_label_text": "options.vsync.adaptive"
+        }
+      }
+    ]
+  },
+  "dev_identity_environment_dropdown_content@settings_common.option_radio_dropdown_group": {
+    "$radio_buttons": [
+      {
+        "identity_environment_dev@settings_common.radio_with_label": {
+          "$toggle_state_binding_name": "#identity_environment_dev",
+          "$radio_label_text": "options.dev_identity_environment.dev"
+        }
+      },
+      {
+        "identity_environment_test@settings_common.radio_with_label": {
+          "$toggle_state_binding_name": "#identity_environment_test",
+          "$radio_label_text": "options.dev_identity_environment.test"
+        }
+      },
+      {
+        "identity_environment_prod@settings_common.radio_with_label": {
+          "$toggle_state_binding_name": "#identity_environment_prod",
+          "$radio_label_text": "options.dev_identity_environment.prod"
         }
       }
     ]

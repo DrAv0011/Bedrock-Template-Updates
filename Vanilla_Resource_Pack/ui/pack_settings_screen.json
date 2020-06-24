@@ -124,6 +124,8 @@
               "content_tier_slider@common.slider": {
                 "anchor_from": "center",
                 "anchor_to": "center",
+                "$slider_select_on_hover": true,
+                "$slider_deselected_button": "button.menu_exit",
                 "size": [ "100% - 18px", 10 ],
                 "layer": 1,
 

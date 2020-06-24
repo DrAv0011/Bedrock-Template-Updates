@@ -31,7 +31,7 @@
           "controls": [
             {
               "tab_content@$tab_content": {
-                "layer": 1
+                "layer": 3
               }
             }
           ]
@@ -287,5 +287,53 @@
     "$checked_hover_image|default": "textures/ui/TabRightFront",
     "$checked_locked_image|default": "textures/ui/TabRightFront",
     "$checked_locked_hover_image|default": "textures/ui/TabRightFront"
+  },
+
+  //---------------------------------------------------------------------------
+  // Pocket Tabs
+  //---------------------------------------------------------------------------
+
+  "pocket_tab_left@common_tabs.tab_left": {
+    "size": [ "100%", 33 ],
+    "$toggle_focus_enabled": false,
+    "$toggle_name": "left_navigation_tab"
+  },
+
+  "pocket_tab_right@common_tabs.tab_right": {
+    "size": [ "100%", 33 ],
+    "$toggle_focus_enabled": false,
+    "$toggle_name": "right_navigation_tab"
+  },
+
+  "pocket_tab_close_button": {
+    "type": "image",
+    "size": [ "100%", 33 ],
+    "texture": "textures/ui/TabRightBackTopMost",
+
+    "controls": [
+      {
+        "close_button@common.light_close_button": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 0 ]
+        }
+      }
+    ]
+  },
+
+  "pocket_tab_help_button": {
+    "type": "image",
+    "size": [ "100%", 33 ],
+    "texture": "textures/ui/TabRightBackTopMost",
+
+    "controls": [
+      {
+        "help_button@common.help_button": {
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 0 ]
+        }
+      }
+    ]
   }
 }

@@ -1,0 +1,35 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:illager_beast",
+      "textures": {
+        "default": "textures/entity/illager_beast"
+      },
+      "materials": {
+        "default": "illager_beast"
+      },
+      "geometry": {
+        "default": "geometry.illager_beast"
+      },
+      "render_controllers": [
+        "controller.render.illager_beast"
+      ],
+      "spawn_egg": {
+        "base_color": "#757470",
+        "overlay_color": "#5b5049"
+      },
+      "animations": {
+        "walk": "animation.illager_beast.walk",
+        "look_at_target": "animation.common.look_at_target",
+        "idle_mouth":  "animation.illager_beast.idle_mouth"
+      },
+      "animation_controllers": [
+        {
+          "move": "controller.animation.illager_beast.move",
+          "head": "controller.animation.illager_beast.head_movement"
+        }
+      ]
+    }
+  }
+}

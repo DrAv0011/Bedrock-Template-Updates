@@ -99,6 +99,7 @@
         "item.trident.thunder":  {"sound":  "item.trident.thunder", "volume": 1.0, "pitch":  1.0},
         "item.trident.hit":  {"sound":  "item.trident.hit", "volume": 1.0, "pitch":  1.0},
         "item.trident.hit_ground":  {"sound":  "item.trident.hit_ground", "volume": 1.0, "pitch":  1.0},
+        "item.shield.block":  {"sound":   "item.shield.block", "volume": 0.7, "pitch":  1.0},
         "armor.equip_chain":  {"sound":  "armor.equip_chain", "volume": 1.0, "pitch":  1.0},
         "armor.equip_diamond":  {"sound":  "armor.equip_diamond", "volume": 1.0, "pitch":  1.0},
         "armor.equip_generic":  {"sound":  "armor.equip_generic", "volume": 1.0, "pitch":  1.0},
@@ -119,7 +120,8 @@
         "crossbow.shoot" : {"sound": "crossbow.shoot", "volume" : 1.0, "pitch" : 1.0},
         "crossbow.quick_charge.start" : {"sound": "crossbow.quick_charge.start", "volume" : 1.0, "pitch" : 1.0},
         "crossbow.quick_charge.middle" : {"sound": "crossbow.quick_charge.middle", "volume" : 1.0, "pitch" : 1.0},
-        "crossbow.quick_charge.end" : {"sound": "crossbow.quick_charge.end", "volume" : 1.0, "pitch" : 1.0}
+        "crossbow.quick_charge.end" : {"sound": "crossbow.quick_charge.end", "volume" : 1.0, "pitch" : 1.0},
+        "item.book.put" :  {"sound": "item.book.put", "volume" : 1.0, "pitch" : 1.0}
      }
   }, 
   
@@ -1036,6 +1038,15 @@
           }
         }
       },
+      "pillager": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.pillager.idle",
+          "hurt": "mob.pillager.hurt",
+          "death": "mob.pillager.death"
+        }
+      },
       "zombie_pigman": {
         "volume": 1.0,
         "pitch": [ 0.8, 1.2 ],
@@ -1330,6 +1341,19 @@
         }
       },
       "villager": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.villager.idle",
+          "hurt": "mob.villager.hit",
+          "death": "mob.villager.death",
+          "death.to.zombie": "mob.villager.death",
+          "haggle": "mob.villager.haggle",
+          "haggle.yes": "mob.villager.yes",
+          "haggle.no": "mob.villager.no"
+        }
+      },
+      "villager_v2": {
         "volume": 1.0,
         "pitch": [ 0.8, 1.2 ],
         "events": {

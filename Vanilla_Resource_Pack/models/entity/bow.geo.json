@@ -1,0 +1,59 @@
+{
+  "format_version": "1.10.0",
+  "geometry.bow_standby": {
+    "visible_bounds_width": 1,
+    "visible_bounds_height": 1,
+    "bones": [
+      {
+        "name": "bow",
+        "pivot": [ 0.0, 0.0, 0.0 ],
+        "rotation": [ 0.0, 0.0, 0.0 ],
+        "texture_meshes": [
+          { "texture": "default" }
+        ]
+      }
+    ]
+  },
+  "geometry.bow_pulling_0": {
+    "visible_bounds_width": 1,
+    "visible_bounds_height": 1,
+    "bones": [
+      {
+        "name": "bow",
+        "pivot": [ 0.0, 0.0, 0.0 ],
+        "rotation": [ 0.0, 0.0, 0.0 ],
+        "texture_meshes": [
+          { "texture": "bow_pulling_0" }
+        ]
+      }
+    ]
+  },
+  "geometry.bow_pulling_1": {
+    "visible_bounds_width": 1,
+    "visible_bounds_height": 1,
+    "bones": [
+      {
+        "name": "bow",
+        "pivot": [ 0.0, 0.0, 0.0 ],
+        "rotation": [ 0.0, 0.0, 0.0 ],
+        "texture_meshes": [
+          { "texture": "bow_pulling_1" }
+        ]
+      }
+    ]
+  },
+  "geometry.bow_pulling_2": {
+    "visible_bounds_width": 1,
+    "visible_bounds_height": 1,
+    "bones": [
+      {
+        "name": "bow",
+        "pivot": [ 0.0, 0.0, 0.0 ],
+        "rotation": [ 0.0, 0.0, 0.0 ],
+        "texture_meshes": [
+          { "texture": "bow_pulling_2" }
+        ]
+      }
+    ]
+  }
+}
