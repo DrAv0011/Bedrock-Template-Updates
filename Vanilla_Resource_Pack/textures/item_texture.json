@@ -888,6 +888,12 @@
     },
     "banner_pattern": {
       "textures": "textures/items/banner_pattern"
+    },
+    "honeycomb": {
+      "textures": "textures/items/honeycomb"
+    },
+    "honey_bottle": {
+      "textures": "textures/items/honey_bottle"
     }
   }
 }
