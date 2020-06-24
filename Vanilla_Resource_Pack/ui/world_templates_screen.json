@@ -316,6 +316,12 @@
         "binding_type": "collection",
         "binding_collection_name": "$collection_name",
         "binding_condition": "visible"
+      },
+      {
+        "binding_name": "(not #lock_visible)",
+        "binding_type": "collection",
+        "binding_collection_name": "$collection_name",
+        "binding_name_override": "#visible"
       }
     ]
   },
@@ -403,7 +409,6 @@
     "type": "stack_panel",
     "orientation": "horizontal",
     "size": [ "100%", "100%" ],
-    "$lock_not_visible|default": true,
     "variables": [
       {
         "requires": "$default_state",
@@ -435,12 +440,19 @@
         "lock_panel": {
           "type": "panel",
           "size": [ "100%c + 4px", "100%" ],
-          "ignored": "$lock_not_visible",
           "controls": [
             {
               "lock_icon@world_templates.lock_icon": {
                 "size": [ 8, 8 ]
               }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#lock_visible",
+              "binding_collection_name": "$collection_name",
+              "binding_type": "collection",
+              "binding_name_override": "#visible"
             }
           ]
         }
@@ -465,7 +477,7 @@
     "anchor_to": "top_left",
     "layer": 1,
     "size": [ "100%", 30 ],
-    "orientation": "horizontal",    
+    "orientation": "horizontal",
     "controls": [
       {
         "world_template_item_button@world_templates.world_template_item_button": {
@@ -795,7 +807,6 @@
                 "$screenshot_texture_name": "#offer_texture_name",
                 "$screenshot_file_system": "#offer_texture_file_system",
                 "$screenshot_zip_folder_binding_type": "none",
-                "$lock_not_visible": false,
                 "bindings": [
                   {
                     "binding_name": "(not #realms_info_visible)",

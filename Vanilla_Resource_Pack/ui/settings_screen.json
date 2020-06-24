@@ -17,7 +17,8 @@
     "$is_world_edit": false,
     "$include_world_section": false,
     "$include_realm_section": false,
-    "$include_controls_and_settings_sections": false
+    "$include_controls_and_settings_sections": false,
+    "$is_global_texture_packs_visible|default":  true
   },
 
   "screen_world_create@settings_screen_base": {
@@ -166,7 +167,8 @@
             },
             {
               "global_texture_pack_button@general_section.global_texture_pack_button": {
-                "$toggle_group_forced_index": "$global_texture_pack_forced_index"
+                "$toggle_group_forced_index": "$global_texture_pack_forced_index",
+                "visible": "($is_global_texture_packs_visible)"
               }
             },
             {

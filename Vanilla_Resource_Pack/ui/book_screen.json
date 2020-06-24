@@ -890,6 +890,10 @@
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
 
+                "sound_name": "item.book.page_turn",
+                "sound_volume": 4.0,
+                "sound_pitch": 1.0,
+
                 "$pressed_button_name": "button.prev_page",
                 "$button_active": "#prev_page_button_active",
                 "$default_texture": "textures/ui/book_arrowleft_default",
@@ -903,6 +907,10 @@
                 "offset": [ -11, 0 ],
                 "anchor_from": "right_middle",
                 "anchor_to": "right_middle",
+
+                "sound_name": "item.book.page_turn",
+                "sound_volume": 4.0,
+                "sound_pitch": 1.0,
 
                 "$pressed_button_name": "button.next_page",
                 "$button_active": "#next_page_button_active",
@@ -944,12 +952,6 @@
         "from_button_id": "button.menu_cancel",
         "to_button_id": "button.book_exit",
         "mapping_type": "global"
-      },
-      {
-        "from_button_id": "button.menu_vr_realign",
-        "to_button_id": "button.menu_vr_realign",
-        "mapping_type": "global",
-        "scope": "controller"
       },
       {
         "from_button_id": "button.menu_tab_left",

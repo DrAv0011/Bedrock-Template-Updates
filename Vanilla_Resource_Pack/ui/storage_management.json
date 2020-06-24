@@ -6,6 +6,11 @@
 {
   "namespace": "storage_management",
 
+  "lock_icon": {
+    "type": "image",
+    "texture": "textures/ui/lock"
+  },
+
   //---------------------------------------------------------------------------
   // Main Content
   //---------------------------------------------------------------------------
@@ -479,6 +484,18 @@
       }
     ],
 
+    "$lock_bindings": [
+      {
+        "binding_type": "$lock_binding_type",
+        "binding_collection_name": "$lock_binding_collection",
+        "binding_name": "#lock_visible",
+        "binding_name_override": "#visible"
+      },
+      {
+        "binding_type": "collection_details"
+      }
+    ],
+
     "controls": [
       {
         "panel": {
@@ -895,6 +912,24 @@
           "text": "$size_text",
           "bindings": "$size_bindings"
         }
+      },
+      {
+        "lock_panel": {
+          "type": "panel",
+          "size": [ "35% + 100%c + 8px", "100%c + 4px" ],
+          "anchor_to": "bottom_right",
+          "anchor_from": "bottom_right",
+          "visible": false,
+          "offset": [ -2, -2 ],
+          "controls": [
+            {
+              "lock_icon@storage_management.lock_icon": {
+                "size": [ 8, 8 ]
+              }
+            }
+          ],
+          "bindings": "$lock_bindings"
+        }
       }
     ]
   },
@@ -1187,6 +1222,9 @@
 
           "$size_binding_type": "collection",
           "$size_binding_collection": "($panel_prefix + _panel)",
+
+          "$lock_binding_type": "collection",
+          "$lock_binding_collection": "($panel_prefix + _panel)",
 
           "$content_template|default": "storage_management.icon_item_text",
           "$control_template|default": "storage_management.resource_toggle",

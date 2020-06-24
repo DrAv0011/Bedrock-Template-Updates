@@ -135,12 +135,6 @@
     ]
   },
 
-  "hide_toggle@settings_common.option_toggle": {
-    "$option_binding_name": "#hide_chat",
-    "$option_enabled_binding_name": "#hide_chat_enabled",
-    "$toggle_name": "hide_chat"
-  },
-
   // Messages Panel //
 
   "messages_text": {
@@ -154,6 +148,8 @@
           "localize": false,
           "size": [ "100%", "default" ],
           "text": "#text",
+          "font_type": "$chat_font_type",
+          "font_scale_factor": "$chat_font_scale_factor",
           "line_padding": "$chat_line_spacing"
         }
       }
@@ -312,7 +308,7 @@
         "handle_select": false,
         "handle_deselect": false,
         "mapping_type": "global",
-        // TODO: Always use this binding once the Mute User Story is finished
+        // TODO: Always use this binding once Chat Settings can be public
         "ignored": "$is_publish"
       },
       {
@@ -321,7 +317,7 @@
         "handle_select": false,
         "handle_deselect": false,
         "mapping_type": "global",
-        // TODO: delete this binding once the Mute User Story is finished
+        // TODO: delete this binding once Chat Settings can be public
         "ignored": "(not $is_publish)"
       },
       {
@@ -525,7 +521,45 @@
     ]
   },
 
-  // TODO: When the Mute User Story is done, then this Mute Toggle should be removed
+  "back_content_panel": {
+    "type": "panel",
+    "size": [ "100%c", "100%" ],
+    "anchor_from": "left_middle",
+    "anchor_to": "left_middle",
+    "controls": [
+      {
+        "back_button@common.back_button": {
+          "offset": [ 0, -1 ],
+          "$button_text_binding_type": "global",
+          "$button_text": "#back_button_text"
+        }
+      },
+      {
+        "gamepad_back_helper": {
+          "type": "panel",
+          "size": [ "100%c", 26 ],
+          "offset": [ -4, -1 ],
+          "$gamepad_helper_icon_description_text_color": "$light_glyph_default_color",
+          "$gamepad_helper_icon_description_shadow": false,
+          "controls": [
+            {
+              "gamepad_helper_button@common.gamepad_helper_b": {
+                "$icon_description_bind": "#back_button_text"
+              }
+            }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#is_using_gamepad",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  // TODO: Delete all chat mute stuff here when Chat Settings can be public
   "mute_text": {
     "type": "panel",
     "size": [ "100%c", "100%" ],
@@ -541,6 +575,12 @@
         }
       }
     ]
+  },
+
+  "hide_toggle@settings_common.option_toggle": {
+    "$option_binding_name": "#hide_chat",
+    "$option_enabled_binding_name": "#hide_chat_enabled",
+    "$toggle_name": "hide_chat"
   },
 
   "mute_interaction": {
@@ -624,44 +664,6 @@
     ]
   },
 
-  "back_content_panel": {
-    "type": "panel",
-    "size": [ "100%c", "100%" ],
-    "anchor_from": "left_middle",
-    "anchor_to": "left_middle",
-    "controls": [
-      {
-        "back_button@common.back_button": {
-          "offset": [ 0, -1 ],
-          "$button_text_binding_type": "global",
-          "$button_text": "#back_button_text"
-        }
-      },
-      {
-        "gamepad_back_helper": {
-          "type": "panel",
-          "size": [ "100%c", 26 ],
-          "offset": [ -4, -1 ],
-          "$gamepad_helper_icon_description_text_color": "$light_glyph_default_color",
-          "$gamepad_helper_icon_description_shadow": false,
-          "controls": [
-            {
-              "gamepad_helper_button@common.gamepad_helper_b": {
-                "$icon_description_bind": "#back_button_text"
-              }
-            }
-          ],
-          "bindings": [
-            {
-              "binding_name": "#is_using_gamepad",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      }
-    ]
-  },
-
   "mute_panel": {
     "type": "stack_panel",
     "orientation": "horizontal",
@@ -710,8 +712,9 @@
                       "size": [ 2, "100%" ]
                     }
                   },
+                  // TODO: Delete this when Chat Settings can be public
                   { "mute_section@chat.mute_panel": { "ignored": "(not $is_publish)" } },
-                  // TODO: Show the chat settings button once the Mute User Story has been finished
+                  // TODO: Show the button when Chat Settings can be public
                   { "chat_settings_button@chat_settings.chat_settings_button_panel": { "ignored": "$is_publish" } },
                   {
                     "padding4": {

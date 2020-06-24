@@ -62,8 +62,107 @@
       "name": "game_tip_item_factory",
       "max_children_size": 1,
       "control_ids": {
-        "game_tip": "game_tip@game_tip.game_tip_item"
+        "game_tip": "game_tip@game_tip.game_tip_item",
+        "inventory_tip": "inventory_tip@game_tip.game_tip_item"
       }
     }
+  },
+
+  //visual tip
+  "game_tip_size_animation_push": {
+    "anim_type": "size",
+    "easing": "in_sine",
+    "from": [ 26, 26 ],
+    "to": [ 30, 30 ],
+    "duration": 1.5,
+    "next": "@game_tip.anim_game_tip_alpha"
+  },
+
+  "game_tip_size_animation_wait_second": {
+    "anim_type": "wait",
+    "duration": "$wait_time",
+    "next": "@game_tip.game_tip_size_animation_push_second"
+  },
+
+  "game_tip_size_animation_push_second": {
+    "anim_type": "size",
+    "easing": "in_sine",
+    "duration": 1.5,
+    "from": [ 26, 26 ],
+    "to": [ 30, 30 ],
+    "next": "@game_tip.anim_game_tip_alpha"
+  },
+
+  "anim_game_tip_alpha": {
+    "anim_type": "alpha",
+    "easing": "in_sine",
+    "duration": 0.3,
+    "from": 1,
+    "to": 0
+  },
+
+  "cell_image_hint_tips@common.cell_image": {
+    "type": "image",
+    "texture": "textures/ui/hint_1",
+    "size": [ 26, 26 ],
+    "anims": [
+      "@game_tip.game_tip_size_animation_push"
+    ]
+  },
+
+  "cell_image_hint_tips_2@common.cell_image": {
+    "type": "image",
+    "texture": "textures/ui/hint_2",
+    "size": [ 26, 26 ],
+    "$wait_time": 0.2,
+    "anims": [
+      "@game_tip.game_tip_size_animation_wait_second"
+    ]
+  },
+
+  "cell_image_hint_tips_3@common.cell_image": {
+    "type": "image",
+    "texture": "textures/ui/hint_3",
+    "size": [ 26, 26 ],
+    "$wait_time": 0.4,
+    "anims": [
+      "@game_tip.game_tip_size_animation_wait_second"
+    ]
+  },
+
+  "cell_image_hint_tips_4@common.cell_image": {
+    "type": "image",
+    "texture": "textures/ui/hint_4",
+    "size": [ 26, 26 ],
+    "$wait_time": 0.6,
+    "$destroy": "cell_image_hint_tips_4",
+    "anims": [
+      "@game_tip.game_tip_size_animation_wait_second"
+    ]
+  },
+
+  "cell_image_classic_hint@crafting.cell_image": {
+    "texture": "textures/ui/cell_image",
+    "$cell_image_size|default": [ "default", "default" ],
+    "size": "$cell_image_size",
+    "factory": {
+      "name": "visual_tip_item_factory",
+      "max_children_size": 4,
+      "control_ids": {
+        "visual_tip_item_1": "visual_tip_item_1@game_tip.cell_image_hint_tips",
+        "visual_tip_item_2": "visual_tip_item_2@game_tip.cell_image_hint_tips_2",
+        "visual_tip_item_3": "visual_tip_item_3@game_tip.cell_image_hint_tips_3",
+        "visual_tip_item_4": "visual_tip_item_4@game_tip.cell_image_hint_tips_4"
+      }
+    },
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_control_name": "$background_image_control_name",
+        "resolve_sibling_scope": true,
+        "source_property_name": "(#container_item_background = 6)",
+        "target_property_name": "#visible"
+      }
+    ]
   }
 }

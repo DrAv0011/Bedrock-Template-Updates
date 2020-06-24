@@ -1092,7 +1092,7 @@
   "focus_border": {
     "type": "image",
     "texture": "textures/ui/square_image_border_white",
-    "color": [ 0.7, 0.7, 0.7 ]
+    "color": "$non_interact_border_color"
   },
 
   // -----------------------------------------------

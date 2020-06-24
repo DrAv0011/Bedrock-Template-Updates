@@ -397,6 +397,7 @@
     "$alpha|default": 1.0,
     "$radio_label_bindings|default": [],
     "$radio_label_color|default": "$main_header_text_color",
+    "$radio_label_font_type|default": "default",
     "$no_label|default": false,
     "controls": [
       {
@@ -416,6 +417,7 @@
           "anchor_from": "left_middle",
           "anchor_to": "left_middle",
           "text": "$radio_label_text",
+          "font_type": "$radio_label_font_type",
           "color": "$radio_label_color",
           "offset": [ 16, 0.5 ],
           "size": [ "100% - 16px", "default" ],
@@ -535,16 +537,18 @@
                 "layer": 1,
                 "$options_dropdown_label_color_binding_type|default": "none",
                 "$options_dropdown_label_color_binding|default": "",
+                "$options_dropdown_toggle_label_font_type|default": "default",
                 "anchor_from": "left_middle",
                 "anchor_to": "left_middle",
                 "size": [ "100%", "default" ],
                 "max_size": [ "100%", "100%" ],
                 "text": "$options_dropdown_toggle_label_binding",
+                "font_type": "$options_dropdown_toggle_label_font_type",
                 "alpha": "$content_alpha",
 
                 "$options_dropdown_toggle_label_binding_type|default": "global",
                 "$options_dropdown_toggle_label_binding_collection_name|default": "",
-                "bindings": [
+                "$options_dropdown_label_bindings|default": [
                   {
                     "binding_name": "$options_dropdown_toggle_label_binding",
                     "binding_condition": "none",
@@ -556,7 +560,9 @@
                     "binding_type": "$options_dropdown_label_color_binding_type",
                     "binding_name_override": "#color"
                   }
-                ]
+                ],
+
+                "bindings": "$options_dropdown_label_bindings"
               }
             }
           ]

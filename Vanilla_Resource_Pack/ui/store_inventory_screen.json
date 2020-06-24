@@ -84,6 +84,7 @@
                                       "sign_in_button_panel": {
                                         "type": "panel",
                                         "size": [ "100%", 16 ],
+                                        "visible": "$is_pregame",
                                         "controls": [
                                           {
                                             "sign_in_button@common_store.sign_in_button": {
@@ -279,6 +280,7 @@
                                             "sign_in_button_centering_panel": {
                                               "type": "panel",
                                               "size": [ "90%", "100%c" ],
+                                              "visible": "$is_pregame",
                                               "controls": [
                                                 {
                                                   "sigh_in_button@common_store.sign_in_button": {

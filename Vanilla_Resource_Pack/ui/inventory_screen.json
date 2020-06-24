@@ -1486,7 +1486,8 @@
       { "cell_normal@crafting.cell_image_normal": {} },
       { "cell_invert@crafting.cell_image_invert": {} },
       { "cell_red@crafting.cell_image_red": {} },
-      { "cell_selected@crafting.cell_image_selected": {} }
+      { "cell_selected@crafting.cell_image_selected": {} },
+      { "cell_hint@game_tip.cell_image_classic_hint": {} }
     ],
     "bindings": [
       {
@@ -2031,13 +2032,17 @@
       {
         "inventory_panel_bottom_half@common.inventory_panel_bottom_half": {
           "layer": 2,
-          "$button_ref": "crafting.inventory_container_slot_button"
+          "$button_ref": "crafting.inventory_container_slot_button",
+          "$background_images": "crafting.container_cell_images"
+
         }
       },
       {
         "hotbar_grid@common.hotbar_grid_template": {
           "layer": 2,
-          "$button_ref": "crafting.inventory_container_slot_button"
+          "$button_ref": "crafting.inventory_container_slot_button",
+          "$background_images": "crafting.container_cell_images"
+
         }
       }
     ]
@@ -2606,6 +2611,11 @@
       {
         "flying_item_renderer@common.flying_item_renderer": {
           "layer": 13
+        }
+      },
+      {
+        "game_tip@game_tip.game_tip_panel": {
+          "layer": 14
         }
       },
       { "selected_item_details_factory@common.selected_item_details_factory": {} }
