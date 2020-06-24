@@ -1,5 +1,5 @@
 {
-    "format_version": "1.13.0",
+    "format_version": "1.16.0",
     "minecraft:entity": {
         "description": {
             "identifier": "minecraft:bee",
@@ -30,7 +30,7 @@
                     }
                 },
                 "minecraft:behavior.follow_parent": {
-                    "priority": 6,
+                    "priority": 11, // This has to be lower priority than move to block goal so that bee seek shelter in rain instead of following parents
                     "speed_multiplier": 1.1
                 }
             },
@@ -86,29 +86,26 @@
                 },
                 "minecraft:behavior.melee_attack": {
                     "priority": 2,
-                    "target_dist": 1.2,
-                    "track_target": false,
                     "attack_once": true,
-                    "reach_multiplier": 2.0,
-                    "look_distance": 30,
-                    "untrackable_cooldown_delay": 17,
-                    "speed_multiplier": 9,
-                    "target_tracking": {
-                        "refresh_period_min": 4,
-                        "refresh_period_max": 11,
-                        "backoff": [
-                            {
-                                "distance_squared_gt": 256,
-                                "refresh_period_delta": 50
-                            },
-                            {
-                                "distance_squared_gt": 1024,
-                                "refresh_period_delta": 100
-                            }
-                        ]
-                    },
+                    "speed_multiplier": 1.4,
                     "on_attack": {
                         "event": "countdown_to_perish_event",
+                        "target": "self"
+                    }
+                }
+            },
+            "escape_fire": {
+                "minecraft:behavior.panic": {
+                    "priority": 1,
+                    "speed_multiplier": 1.25,
+                    "force": true
+                  },
+                "minecraft:timer": {
+                    "looping": false,
+                    "time": [20,50],
+                    "randomInterval": true,
+                    "time_down_event": {
+                        "event": "stop_panicking_after_fire",
                         "target": "self"
                     }
                 }
@@ -116,6 +113,11 @@
             "countdown_to_perish": {
                 "minecraft:mark_variant": {
                   "value": 1
+                },
+                "minecraft:behavior.panic": {
+                    "priority": 1,
+                    "speed_multiplier": 1.25,
+                    "force": true
                 },
                 "minecraft:timer": {
                     "looping": false,
@@ -297,9 +299,9 @@
                                                 "value": false
                                             },
                                             {
-                                                "test": "is_weather",
-                                                "value": "clear",
-                                                "operator": "!="
+                                                "test": "weather",
+                                                "operator": "==",
+                                                "value": "precipitation"
                                             }
                                         ]
                                     },
@@ -326,7 +328,8 @@
                             "filters": {
                                 "all_of": [
                                     {
-                                        "test": "is_weather",
+                                        "test": "weather",
+                                        "operator": "==",
                                         "value": "clear"
                                     },
                                     {
@@ -383,7 +386,7 @@
                 ]
             },
             "minecraft:behavior.random_hover": {
-                "priority": 11,
+                "priority": 12,
                 "xz_dist": 8,
                 "y_dist": 8,
                 "y_offset": -1,
@@ -446,6 +449,7 @@
             "minecraft:navigation.hover": {
                 "can_path_over_water": true,
                 "can_sink": false,
+                "can_pass_doors": false,
                 "can_path_from_air": true,
                 "avoid_water": true,
                 "avoid_damage_blocks": true,
@@ -478,23 +482,31 @@
         },
         "events": {
             "minecraft:entity_spawned": {
-                "randomize": [
+                "sequence": [
                     {
-                        "weight": 95,
-                        "add": {
-                            "component_groups": [
-                                "bee_adult",
-                                "track_attacker",
-                                "shelter_detection",
-                                "look_for_food"
-                            ]
-                        }
+                        "randomize": [
+                            {
+                                "weight": 95,
+                                "add": {
+                                    "component_groups": [
+                                        "bee_adult"
+                                    ]
+                                }
+                            },
+                            {
+                                "weight": 5,
+                                "add": {
+                                    "component_groups": [
+                                        "bee_baby"
+                                    ]
+                                }
+                            }
+                        ]
                     },
                     {
-                        "weight": 5,
                         "add": {
                             "component_groups": [
-                                "bee_baby",
+                                "track_attacker",
                                 "shelter_detection",
                                 "look_for_food"
                             ]
@@ -507,6 +519,7 @@
                     "component_groups": [
                         "bee_baby",
                         "shelter_detection",
+                        "track_attacker",
                         "look_for_food"
                     ]
                 }
@@ -519,8 +532,7 @@
                 },
                 "add": {
                     "component_groups": [
-                        "bee_adult",
-                        "track_attacker"
+                        "bee_adult"
                     ]
                 }
             },
@@ -536,14 +548,44 @@
                         "return_to_home",
                         "has_nectar",
                         "abort_shelter_detection",
-                        "shelter_detection"
+                        "shelter_detection",
+                        "escape_fire"
                     ]
                 }
             },
             "hive_destroyed": {
+                "sequence": [
+                    {
+                        "filters": {
+                            "test": "is_family",
+                            "subject": "self",
+                            "operator": "!=",
+                            "value": "pacified"
+                        },
+                        "add": {
+                            "component_groups": [
+                                "take_nearest_target"
+                            ]
+                        },
+                        "remove": {
+                            "component_groups": [
+                                "escape_fire"
+                            ]
+                        }
+                    }
+                ]
+            },
+            "stop_panicking_after_fire" : {
+                "remove": {
+                    "component_groups": [
+                        "escape_fire"
+                    ]
+                }
+            },
+            "minecraft:exited_hive_on_fire": {
                 "add": {
                     "component_groups": [
-                        "take_nearest_target"
+                        "escape_fire"
                     ]
                 }
             },
@@ -670,7 +712,8 @@
                        },
                        "remove": {
                            "component_groups": [
-                               "find_hive"
+                               "find_hive",
+                               "escape_fire"
                            ]
                        },
                        "add": {
@@ -729,7 +772,8 @@
                 "remove": {
                     "component_groups": [
                         "abort_shelter_detection",
-                        "return_to_home"
+                        "return_to_home",
+                        "escape_fire"
                     ]
                 },
                 "add": {
@@ -739,6 +783,7 @@
                     ]
                 }
             },
+            
             "countdown_to_perish_event" : {
                 "remove": {
                     "component_groups": [
@@ -748,7 +793,8 @@
                         "look_for_food",
                         "angry_bee",
                         "hive_full",
-                        "find_hive"
+                        "find_hive",
+                        "escape_fire"
                     ]
                 },
                 "add": {
