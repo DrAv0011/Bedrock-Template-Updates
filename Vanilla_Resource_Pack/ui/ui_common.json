@@ -1161,11 +1161,10 @@
   "tts_label_focus_wrapper": {
     "type": "panel",
     "$tts_label_panel|default": "common.empty_panel",
-    "$focus_border_size|default": [ "100%", 16 ],
+    "$focus_border_size|default": [ "100%", "100%sm" ],
     "$focus_border_anchor|default": "center",
     "$focus_border_offset|default": [ 0, 0 ],
     "$focus_border_precedence|default": 0,
-    "$inherit_sibling_height|default": false,
     "size": [ "100%", "100%cm" ],
     "controls": [
       {
@@ -1175,7 +1174,6 @@
         "focus_border@common.non_interact_focus_border_button": {
           "size": "$focus_border_size",
           "tts_inherit_siblings": true,
-          "inherit_max_sibling_height": "$inherit_sibling_height",
           "anchor_from": "$focus_border_anchor",
           "anchor_to": "$focus_border_anchor",
           "offset": "$focus_border_offset",
@@ -2635,7 +2633,6 @@
                   {
                     "binding_name": "$hover_text_binding_name",
                     "binding_name_override": "#hover_text",
-                    "binding_condition": "always",
                     "binding_type": "collection",
                     "binding_collection_name": "$item_collection_name"
                   }
@@ -4689,7 +4686,8 @@
               "$patch_notes_screen_size": [ 300, "100% - 4px" ], // Patch Notes Screen
               "$sign_screen_size": [ 185, 90 ], // Sign Screen
               "$mob_effect_screen_size": [ "90%", "90%" ], // Mob Effect Screen
-              "$purchase_coin_screen_size": [ "85%", "17%x + 65px" ], //Coin Purchase Screen
+              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ], //Coin Purchase Screen
+              "$choose_realm_screen_size": [ "70%", "85%" ], //Choose Realm Screen
               "$world_modal_screen_size": [ 290, 100 ] // world convert and world loading modal progress screens
             },
             // PE edition and VR
@@ -4725,7 +4723,8 @@
               "$patch_notes_screen_size": [ 300, "100% - 4px" ], // Patch Notes Screen
               "$sign_screen_size": [ 185, 90 ], // Sign Screen
               "$mob_effect_screen_size": [ "90%", "90%" ], // Mob Effect Screen
-              "$purchase_coin_screen_size": [ "85%", "17%x + 65px" ], //Coin Purchase Screen
+              "$purchase_coin_screen_size": [ "90%", "17%x + 82px" ], //Coin Purchase Screen
+              "$choose_realm_screen_size": [ "70%", "85%" ], //Choose Realm Screen
               "$world_modal_screen_size": [ 290, 100 ] // world convert and world loading modal progress screens
             }
           ],
@@ -5266,13 +5265,12 @@
               "tooltip_text_image_panel": {
                 "ignored": "$ignore_tooltip_popup_image",
                 "type": "panel",
-                "size": [ "100%y", 8 ],
+                "size": [ "100%y", "100%sm" ],
                 "min_size": [ 8, 8 ],
                 // The max y is 200 due to the fact that we have no way to say use inherited max sibling height
                 //   - 200 was used in thoughts that whatever text was used would not need more that 200px
                 //     allowing the image to grow and string with the height of the text object
                 "max_size": [ 12, 200 ],
-                "inherit_max_sibling_height": true,
                 "controls": [
                   {
                     "tooltip_image_panel": {
@@ -5313,28 +5311,19 @@
               }
             },
             {
-              "tooltip_text_panel": {
-                "type": "panel",
-                "size": [ "fill", 20 ],
-                "controls": [
+              "tooltip_text": {
+                "type": "label",
+                "size": [ "fill", "default" ],
+                "$tooltip_text_binding_name|default": "#tooltip_text",
+                "text": "$tooltip_text_binding_name",
+                "$tooltip_text_color|default": "$f_color_format",
+                "color": "$tooltip_text_color",
+                "bindings": [
                   {
-                    "tooltip_text": {
-                      "type": "label",
-                      "size": [ "100%", "default" ],
-                      "max_size": [ "100%", "100%" ],
-                      "$tooltip_text_binding_name|default": "#tooltip_text",
-                      "text": "$tooltip_text_binding_name",
-                      "$tooltip_text_color|default": "$f_color_format",
-                      "color": "$tooltip_text_color",
-                      "bindings": [
-                        {
-                          "binding_name": "$tooltip_text_binding_name",
-                          "binding_collection_name": "$tooltip_button_collection_name",
-                          "binding_type": "$tooltip_button_binding_type",
-                          "binding_condition": "visibility_changed"
-                        }
-                      ]
-                    }
+                    "binding_name": "$tooltip_text_binding_name",
+                    "binding_collection_name": "$tooltip_button_collection_name",
+                    "binding_type": "$tooltip_button_binding_type",
+                    "binding_condition": "visibility_changed"
                   }
                 ]
               }

@@ -9,12 +9,11 @@
       }
     },
     "components": {
-      "minecraft:emitter_rate_manual": {
-        "max_particles": 100
+      "minecraft:emitter_rate_instant": {
+        "num_particles": 1
       },
-      "minecraft:emitter_lifetime_expression": {
-        "activation_expression": 1,
-        "expiration_expression": 0
+      "minecraft:emitter_lifetime_once": {
+        "active_time": 0
       },
       "minecraft:emitter_shape_sphere": {
         "radius": 0.025,
@@ -42,10 +41,9 @@
       },
       "minecraft:particle_appearance_tinting": {
         "color": [
-          "Math.sin(variable.particle_random_2*120) * 0.65 + 0.35",
-          "Math.sin((variable.particle_random_2+1.0f)*120) * 0.65 + 0.35",
-          "Math.sin((variable.particle_random_2+2.0f)*120) * 0.65 + 0.35",
-          1
+          "variable.note_color.r",
+          "variable.note_color.g",
+          "variable.note_color.b"
         ]
       },
       "minecraft:particle_appearance_lighting": {}

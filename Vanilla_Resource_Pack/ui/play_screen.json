@@ -1289,8 +1289,7 @@
       },
       {
         "focus_button@common.non_interact_focus_border_button": {
-          "size": [ "100%", 28 ],
-          "inherit_max_sibling_height": true,
+          "size": [ "100%", "100%sm" ],
           "tts_inherit_siblings": true
         }
       }
@@ -2416,6 +2415,13 @@
     ]
   },
 
+  "quick_play_button@common_buttons.light_text_button": {
+    "$pressed_button_name": "button.menu_quick_play",
+    "$button_text": "menu.quickplay",
+    "focus_identifier": "quick_play_button",
+    "layer": 1
+  },
+
   "create_new_world_button@common_buttons.light_text_button": {
     "variables": [
       {
@@ -2431,7 +2437,8 @@
     "anchor_to": "top_left",
     "$button_text": "selectWorld.createNew",
     "$button_focus_precedence": 10,
-    "$focus_override_up": "close_button",
+    "$create_new_row_focus_override_up|default": "close_button",
+    "$focus_override_up": "$create_new_row_focus_override_up",
     "layer": 1
   },
 
@@ -2454,7 +2461,8 @@
     "$button_size_override": [ "100% + 1px", "100%" ],
     "$button_background_anchor": "top_right",
     "layer": 2,
-    "$focus_override_up": "close_button",
+    "$create_new_row_focus_override_up|default": "close_button",
+    "$focus_override_up": "$create_new_row_focus_override_up",
     "bindings": [
       {
         "binding_name": "#worlds_tab_import_button_focus_down_override",
@@ -2668,10 +2676,20 @@
         "header_button": {
           // we don't support importing or creating a new world for realm upload yet
           "ignored": "$local_world_upload",
-          "type": "panel",
+          "type": "stack_panel",
+          "orientation": "vertical",
           "layer": 1,
           "size": [ "100%", "100%c + 4px" ],
           "controls": [
+            {
+              "quick_play@play.quick_play_button": {
+                "ignored": "(not $education_edition)",
+                "layer": 1,
+                // 0.5 to line up with the button panel below
+                "size": [ "100% + 0.5px", 30 ],
+                "$focus_override_up": "close_button"
+              }
+            },
             {
               "buttons@play.header_button_panel": {
                 "layer": 1,
@@ -2990,6 +3008,7 @@
   "no_local_worlds_switch_setting": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
+    "ignored": "$education_edition",
     "controls": [
       {
         "bg@play.label_background": {
@@ -3166,6 +3185,7 @@
   },
 
   "friends_scroll_panel@play.common_scroll_pane": {
+    "$hide_xbox_live_icon": true,
     "controls": [
       {
         "stack_panel": {
@@ -4253,6 +4273,13 @@
   },
 
   "play_screen_panel@play.common_play_screen_panel": {
+    // If in edu quickplay is above create new so adjust focus override accordingly
+    "variables": [
+      {
+        "requires": "$education_edition",
+        "$create_new_row_focus_override_up": "quick_play_button"
+      }
+    ],
     "controls": [
       {
         "tab_navigation_panel@play.tab_navigation_panel_layout": {

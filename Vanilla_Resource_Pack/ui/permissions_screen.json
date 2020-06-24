@@ -377,7 +377,8 @@
     "bindings": [
       {
         "binding_name": "#ip_address_text",
-        "binding_name_override": "#ip"
+        "binding_name_override": "#ip",
+        "binding_condition": "visibility_changed"
       }
     ]
   },

@@ -176,9 +176,20 @@
               }
             },
             {
-              "search_tab@crafting_pocket.search_tab": {
+              "recipe_panel": {
+                "type": "panel",
                 "size": [ "100%", "16%" ],
-                "max_size": [ "100%", 33 ]
+                "max_size": [ "100%", 33 ],
+                "controls": [
+                  {
+                    "search_tab@crafting_pocket.search_tab": {
+                      "anchor_from": "center",
+                      "anchor_to": "center",
+                      "offset": [ 0, 0 ]
+                    }
+                  },
+                  { "open_recipe_book_factory@game_tip.open_recipe_book_factory": {} }
+                ]
               }
             },
             {
@@ -224,7 +235,8 @@
                       "anchor_to": "center",
                       "offset": [ 0, 0 ]
                     }
-                  }
+                  },
+                  { "close_inventory_tip@game_tip.close_inventory_factory": {} }
                 ],
                 "bindings": [
                   {
@@ -1244,7 +1256,8 @@
       },
       {
         "game_tip@game_tip.game_tip_panel": {
-          "layer": 14
+          "layer": 14,
+          "offset": [ 0, "10%" ]
         }
       },
       {

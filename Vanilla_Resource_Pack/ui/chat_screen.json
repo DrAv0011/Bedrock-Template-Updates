@@ -829,6 +829,18 @@
 
   "dev_console_screen@common.base_screen": {
     "$screen_content": "chat.dev_console_dialog",
-    "force_render_below": true
+    "force_render_below": true,
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.chat_menu_cancel",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.chat_menu_cancel",
+        "mapping_type": "global"
+      }
+    ]
   }
 }

@@ -27,6 +27,9 @@
         { "phantom_base_pose": "controller.animation.phantom.base_pose" },
         { "move": "controller.animation.phantom.move" }
       ],
+      "particle_effects": {
+        "wing_dust": "minecraft:phantom_trail_particle"
+      },
       "render_controllers": [ "controller.render.phantom" ],
       "spawn_egg": {
         "texture": "spawn_egg",

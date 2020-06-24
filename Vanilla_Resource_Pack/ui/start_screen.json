@@ -8,13 +8,6 @@
     "size": [ 16, 16 ]
   },
 
-  "educator_resource_icon": {
-    "type": "image",
-    "texture": "textures/items/apple",
-    "layer": 30,
-    "size": [ 18, 18 ]
-  },
-
   "Xbox_icon": {
     "type": "image",
     "texture": "textures/ui/xbox4",
@@ -33,12 +26,6 @@
 
   "new_offers_icon@common_store.new_offer_icon": {
     "layer": 11, // This is the lowest layer where the button border won't show through this icon while being pressed
-    "anchor_from": "top_right",
-    "anchor_to": "top_right"
-  },
-
-  "beta_icon@common_store.beta_icon": {
-    "layer": 15, // This is the lowest layer where the button border won't show through this icon while being pressed, most notable on ios
     "anchor_from": "top_right",
     "anchor_to": "top_right"
   },
@@ -299,38 +286,9 @@
     "type": "panel"
   },
 
-  "educator_resources_content": {
-    "type": "panel",
-    "controls": [
-      {
-        "educator_resource_icon@start.educator_resource_icon": {
-          "anchor_to": "left_middle",
-          "anchor_from": "left_middle",
-          "offset": [ 10, -2 ]
-        }
-      },
-      {
-        "educator_resource_text_hover": {
-          "ignored": "$hover_state",
-          "type": "label",
-          "text": "menu.educatorResources",
-          "color": "$light_button_default_text_color"
-        }
-      },
-      {
-        "educator_resource_text_default": {
-          "ignored": "(not $hover_state)",
-          "type": "label",
-          "text": "menu.educatorResources",
-          "color": "$generic_button_text_color"
-        }
-      }
-    ]
-  },
-
-  "educator_resources_button@start.main_content_button": {
+  "educator_resources_button@start.main_button": {
     "$pressed_button_name": "button.edu_resources",
-    "$button_content": "start.educator_resources_content"
+    "$button_text": "menu.educatorResources"
   },
 
   "online_buttons_panel": {
@@ -541,21 +499,24 @@
     ]
   },
 
-  "quick_play_button@start.main_button": {
-    "$pressed_button_name": "button.menu_quick_play",
-    "$button_text": "menu.quickplay",
-    "default_focus_precedence": 1,
-    "$focus_override_right": "menu_skins_button",
-    "bindings": [
-      {
-        "binding_name": "#focus_change_left"
-      }
-    ]
+  "course_button@start.main_button": {
+    "$pressed_button_name": "button.menu_courses",
+    "$button_text": "course.edu.courses"
   },
 
   "library_button@start.main_button": {
     "$pressed_button_name": "button.menu_library",
     "$button_text": "library.title"
+  },
+
+  "tutorial_button@start.main_button": {
+    "$pressed_button_name": "button.menu_tutorial",
+    "$button_text": "tutorial.edu.menuTitle"
+  },
+
+  "switch_accounts_button@start.main_button": {
+    "$pressed_button_name": "button.switch_accounts",
+    "$button_text": "accounts.switch"
   },
 
   "achievements_button@start.main_button": {
@@ -832,22 +793,16 @@
               "library@start.stacked_row": {
                 "ignored": "(not $education_edition)",
                 "controls": [
-                  { "library_button@start.library_button": {} },
-                  {
-                    "beta_icon@start.beta_icon": {
-                      "ignored": "$ios",
-                      "offset": [ 8, -6 ]
-                    }
-                  }
+                  { "library_button@start.library_button": {} }
                 ]
               }
             },
             {
-              "quick_play_educator_resources@start.stacked_row": {
+              "switch_accounts_or_educator_resources@start.stacked_row": {
                 "ignored": "(not $education_edition)",
                 "controls": [
                   {
-                    "quick_play_button@start.quick_play_button": {
+                    "switch_accounts@start.switch_accounts_button": {
                       "bindings": [
                         {
                           "binding_name": "(not #teacher_content_visible)",

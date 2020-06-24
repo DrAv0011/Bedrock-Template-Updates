@@ -355,10 +355,6 @@
   //---------------------------------------------------------------------------
 
   "result_slot_button@common.no_coalesce_container_slot_button": {
-    "sound_name": "ui.loom.take_result",
-    "sound_volume": 1.0,
-    "sound_pitch": 1.0,
-
     "button_mappings": [
       {
         "from_button_id": "button.menu_select",

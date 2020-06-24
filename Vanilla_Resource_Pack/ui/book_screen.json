@@ -438,7 +438,7 @@
     "$text_background_hover": "book.text_edit_hover_image",
     "$text_edit_box_focusable_binding_name": "#editable",
 
-    "$enable_profanity_filter": "$read_only_book"
+    "$enable_profanity_filter": true
   },
 
   "page_text@book.page_text_edit": {
@@ -453,7 +453,7 @@
     "$text_edit_visible_binding_collection_name": "book_pages",
     "$text_edit_visible_binding_type|default": "collection",
 
-    "$enable_profanity_filter": "$read_only_book"
+    "$enable_profanity_filter": true
   },
 
   "page_number_label": {
@@ -663,7 +663,7 @@
     "$text_background_default": "book.blank",
     "$text_background_hover": "book.text_edit_hover_image",
 
-    "$enable_profanity_filter": "$read_only_book"
+    "$enable_profanity_filter": true
   },
 
   "author_label": {
@@ -692,7 +692,7 @@
     "$text_background_default": "book.blank",
     "$text_background_hover": "book.text_edit_hover_image",
 
-    "$enable_profanity_filter": "$read_only_book"
+    "$enable_profanity_filter": true
   },
 
   "author_stack_panel": {

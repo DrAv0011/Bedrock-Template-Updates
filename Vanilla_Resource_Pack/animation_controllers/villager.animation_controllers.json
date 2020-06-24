@@ -1,12 +1,12 @@
 {
-  "format_version": "1.8.0",
+  "format_version": "1.10.0",
   "animation_controllers": {
     "controller.animation.villager.general": {
       "states": {
         "default": {
           "animations": [
-            { "general": [] },
-            { "look_at_target": [] }
+            "general",
+            { "look_at_target": "!query.is_sleeping" }
           ]
         }
       }
@@ -14,16 +14,8 @@
     "controller.animation.villager.move": {
       "states": {
         "default": {
-          "parameters": [ "query.modified_move_speed" ],
           "animations": [
-            {
-              "move": [
-                {
-                  "0.0": 0.0,
-                  "1.0": 1.0
-                }
-              ]
-            }
+            { "move": "query.modified_move_speed" }
           ]
         }
       }
@@ -31,16 +23,8 @@
     "controller.animation.villager.baby": {
       "states": {
         "baby": {
-          "parameters": [ "query.is_baby" ],
           "animations": [
-            {
-              "baby_transform": [
-                {
-                  "0.0": 0.0,
-                  "1.0": 1.0
-                }
-              ]
-            }
+            { "baby_transform": "query.is_baby" }
           ]
         }
       }

@@ -89,7 +89,8 @@
         "twinkle":  {"sound":  "firework.twinkle", "volume": 1.0, "pitch":  1.0 },
         "block.end_portal_frame.fill":  {"sound":  "block.end_portal_frame.fill", "volume": 0.3, "pitch":  1.0 },
         "block.end_portal.spawn":  {"sound":  "block.end_portal.spawn", "volume": 0.7, "pitch":  1.0 }, 
-        "random.anvil_use":  {"sound":  "random.anvil_use", "volume": 0.7, "pitch":  1.0 },
+        "random.anvil_use":  {"sound":  "random.anvil_use", "volume": 0.6, "pitch":  1.0 },
+        "block.smithing_table.use":  {"sound":  "random.anvil_use", "volume": 0.25, "pitch":  1.0 },
         "block.barrel.open": {"sound": "block.barrel.open", "volume": 1.0, "pitch": 1.0 },
         "block.barrel.close": {"sound": "block.barrel.close", "volume": 1.0, "pitch": 1.0 },
         "block.grindstone.use":  {"sound":  "block.grindstone.use", "volume": 1.0, "pitch":  1.0 },
@@ -97,6 +98,10 @@
         "block.composter.fill": {"sound": "block.composter.fill", "volume": 1.0, "pitch": 1.0 },
         "block.composter.fill_success": {"sound": "block.composter.fill_success", "volume": 1.0, "pitch": 1.0 },
         "block.composter.ready": {"sound": "block.composter.ready", "volume": 1.0, "pitch": 1.0 },
+        "block.smoker.smoke": {"sound": "block.smoker.smoke", "volume": 3.0, "pitch": 1.0 },
+        "block.blastfurnace.fire_crackle": {"sound": "block.blastfurnace.fire_crackle", "volume": 3.0, "pitch": 1.0 },
+        "block.loom.use" :  {"sound": "block.loom.use", "volume" : 0.75, "pitch" : 1.0},
+        "block.fletching_table.use" :  {"sound": "dig.wood", "volume" : 12.0, "pitch" :  1.0},
         "bottle.dragonbreath":  {"sound":  "bottle.dragonbreath", "volume": 0.7, "pitch":  1.0 },
         "item.trident.return":  {"sound":  "item.trident.return", "volume": 10.0, "pitch":  1.0},
         "item.trident.riptide_1":  {"sound":  "item.trident.riptide_1", "volume": 1.0, "pitch":  1.0},
@@ -128,17 +133,18 @@
         "crossbow.quick_charge.start" : {"sound": "crossbow.quick_charge.start", "volume" : 1.0, "pitch" : 1.0},
         "crossbow.quick_charge.middle" : {"sound": "crossbow.quick_charge.middle", "volume" : 1.0, "pitch" : 1.0},
         "crossbow.quick_charge.end" : {"sound": "crossbow.quick_charge.end", "volume" : 1.0, "pitch" : 1.0},
-        "item.book.put" :  {"sound": "item.book.put", "volume" : 1.0, "pitch" : 1.0},
+        "item.book.put" :  {"sound": "item.book.put", "volume" : 1.2, "pitch" : 1.0},
         "teleport" :  {"sound": "mob.shulker.teleport", "volume" :  1.0, "pitch" :  1.0 },
         "block.bell.hit" : {"sound": "block.bell.hit", "volume" :  1.0, "pitch":  1.0},
         "block.campfire.crackle" :  {"sound": "block.campfire.crackle", "volume" : 1.0, "pitch" : 1.0},
-	"ui.stonecutter.take_result" :  {"sound": "ui.stonecutter.take_result", "volume" : 1.0, "pitch": 1.0},
-        "ui.cartography_table.take_result": {"sound": "ui.cartography_table.take_result", "volume": 1.0, "pitch": 1.0},
-	"block.sweet_berry_bush.hurt" :  {"sound": "block.sweet_berry_bush.hurt", "volume" : 1.0, "pitch" : 1.0},
+        "block.stonecutter.use" :  {"sound": "block.stonecutter.use", "volume" : 0.7, "pitch": 1.0},
+        "block.cartography_table.use": {"sound": "block.cartography_table.use", "volume": 0.8, "pitch": 1.0},
+        "block.sweet_berry_bush.hurt" :  {"sound": "block.sweet_berry_bush.hurt", "volume" : 1.0, "pitch" : 1.0},
         "block.sweet_berry_bush.pick" :  {"sound": "block.sweet_berry_bush.pick", "volume" : 1.0, "pitch" : 1.0},
-        "raid.horn" :  {"sound": "raid.horn", "volume" : 60.0, "pitch" : 1.0},
-        "block.loom.use" :  {"sound": "ui.loom.take_result", "volume" : 1.0, "pitch" : 1.0},
-        "block.fletching_table.use" :  {"sound": "dig.wood", "volume" : 1.0, "pitch" :  1.0}
+        "ui.stonecutter.take_result" :  {"sound": "ui.stonecutter.take_result", "volume" : 1.0, "pitch": 1.0},
+        "ui.cartography_table.take_result": {"sound": "ui.cartography_table.take_result", "volume": 0.8, "pitch": 1.0},
+        "ui.loom.take_result" :  {"sound": "ui.loom.take_result", "volume" : 0.65, "pitch" : 1.0},
+        "raid.horn" :  {"sound": "raid.horn", "volume" : 60.0, "pitch" : 1.0}
      }
   }, 
   
@@ -183,7 +189,8 @@
         "death": "game.player.die",
         "ambient.in.water": "",
         "hurt.in.water": "",
-        "death.in.water": ""
+        "death.in.water": "",
+        "ambient.in.raid": ""
       }
     },
     "entities": {
@@ -507,7 +514,8 @@
           "cast.spell": "mob.evocation_illager.cast_spell",
           "prepare.attack": "mob.evocation_illager.prepare_attack",
           "prepare.summon": "mob.evocation_illager.prepare_summon",
-          "prepare.wololo": "mob.evocation_illager.prepare_wololo"
+          "prepare.wololo": "mob.evocation_illager.prepare_wololo",
+          "ambient.in.raid": {"sound": "mob.evocation_illager.ambient", "volume": 3.0, "pitch": [ 0.8, 1.2 ]}
         }
       },
       "evocation_fang": {
@@ -814,7 +822,8 @@
           "step": "mob.ravager.step",
           "attack.strong": "mob.ravager.bite",
           "roar": "mob.ravager.roar",
-          "stun": "mob.ravager.stun"
+          "stun": "mob.ravager.stun",
+          "ambient.in.raid": {"sound": "mob.ravager.ambient", "volume": 3.0, "pitch": [ 0.8, 1.2 ]}
         }
       },
       "snow_golem": {
@@ -1076,7 +1085,8 @@
         "events": {
           "ambient": "mob.pillager.idle",
           "hurt": "mob.pillager.hurt",
-          "death": "mob.pillager.death"
+          "death": "mob.pillager.death",
+          "ambient.in.raid": {"sound": "mob.pillager.idle", "volume": 3.0, "pitch": [ 0.8, 1.2 ]}
         }
       },
       "zombie_pigman": {
@@ -1403,7 +1413,8 @@
         "events": {
           "ambient": "mob.vindicator.idle",
           "hurt": "mob.vindicator.hurt",
-          "death": "mob.vindicator.death"
+          "death": "mob.vindicator.death",
+          "ambient.in.raid": {"sound": "mob.vindicator.idle", "volume": 3.0, "pitch": [ 0.8, 1.2 ]}
         }
       },
       "minecraft:npc": {
@@ -1415,6 +1426,21 @@
           "death": "dig.wood"
         }
       },
+      "wandering_trader": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.wanderingtrader.idle",
+          "death": "mob.wanderingtrader.death",
+          "disappeared": "mob.wanderingtrader.disappeared",
+          "drink": "mob.wanderingtrader.drink_potion",
+          "haggle": "mob.wanderingtrader.haggle",
+          "haggle.yes": "mob.wanderingtrader.yes",
+          "haggle.no": "mob.wanderingtrader.no",
+          "hurt": "mob.wanderingtrader.hurt",
+          "reappeared": "mob.wanderingtrader.reappeared"
+        }
+      },
       "witch": {
         "volume": 1.0,
         "pitch": [ 0.8, 1.2 ],
@@ -1422,16 +1448,9 @@
           "ambient": "mob.witch.ambient",
           "hurt": "mob.witch.hurt",
           "death": "mob.witch.death",
-          "drink": {
-            "sound": "mob.witch.drink",
-            "volume": 1.0,
-            "pitch": 1.0
-          },
-          "throw": {
-            "sound": "mob.witch.throw",
-            "volume": 1.0,
-            "pitch": 1.0
-          }
+          "drink": {"sound": "mob.witch.drink", "volume": 1.0, "pitch": 1.0},
+          "throw": {"sound": "mob.witch.throw", "volume": 1.0, "pitch": 1.0},
+          "ambient.in.raid": {"sound": "mob.witch.ambient", "volume": 3.0, "pitch": [ 0.8, 1.2 ]}
         }
       },
       "wither": {
@@ -1502,6 +1521,20 @@
         }
       },
       "zombie_villager": {
+        "volume": 1.0,
+        "pitch": [ 0.8, 1.2 ],
+        "events": {
+          "ambient": "mob.zombie_villager.say",
+          "hurt": "mob.zombie_villager.hurt",
+          "death": "mob.zombie_villager.death",
+          "step": {
+            "sound": "mob.zombie.step",
+            "volume": 0.15,
+            "pitch": 1.0
+          }
+        }
+      },
+      "zombie_villager_v2": {
         "volume": 1.0,
         "pitch": [ 0.8, 1.2 ],
         "events": {

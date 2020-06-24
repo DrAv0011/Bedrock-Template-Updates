@@ -1,6 +1,6 @@
 {
   "format_version": "1.8.0",
-  "geometry.creeper": {
+  "geometry.creeper.v1.8": {
     "visible_bounds_width": 1,
     "visible_bounds_height": 2,
     "visible_bounds_offset": [ 0, 0.75, 0 ],
@@ -79,7 +79,7 @@
       }
     ]
   },
-  "geometry.creeper.charged": {
+  "geometry.creeper.charged.v1.8": {
     "visible_bounds_width": 1,
     "visible_bounds_height": 2,
     "visible_bounds_offset": [ 0, 0.75, 0 ],

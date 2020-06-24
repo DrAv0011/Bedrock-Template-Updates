@@ -20,6 +20,12 @@
         "bow_pulling_1": "geometry.bow_pulling_1",
         "bow_pulling_2": "geometry.bow_pulling_2"
       },
+      "scripts": {
+        "pre_animation": [
+          "variable.anim_frame = (query.item_remaining_use_duration / query.item_max_use_duration);",
+          "variable.anim_frame = math.min(((variable.anim_frame * variable.anim_frame) + variable.anim_frame * 2.0), 2.0);"
+        ]
+      },
       "render_controllers": [ "controller.render.bow" ]
     }
   }

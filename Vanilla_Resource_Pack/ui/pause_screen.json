@@ -263,11 +263,20 @@
     ]
   },
 
+  "how_to_play_button@pause.pause_button_template": {
+    "$pressed_button_name": "button.menu_how_to_play",
+    "$button_text": "menu.howToPlay",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "ignored": "(not $education_edition)"
+  },
+
   "feedback_button@pause.pause_button_template": {
     "$pressed_button_name": "button.menu_feedback",
     "$button_text": "feedbackScreen.button",
     "anchor_to": "top_middle",
-    "anchor_from": "top_middle"
+    "anchor_from": "top_middle",
+    "ignored": "$education_edition"
   },
 
   "invite_players_button@pause.grid_button_template": {
@@ -609,6 +618,7 @@
               }
             },
             { "feedback_button@pause.feedback_button": {} },
+            { "how_to_play_button@pause.how_to_play_button": {} },
             { "how_to_play@pause.vertical_padding": {} },
             { "quit_button@pause.quit_button": {} }
           ]
@@ -814,7 +824,8 @@
     "bindings": [
       {
         "binding_name": "#ip_address_text",
-        "binding_name_override": "#ip"
+        "binding_name_override": "#ip",
+        "binding_condition": "visibility_changed"
       }
     ]
   },

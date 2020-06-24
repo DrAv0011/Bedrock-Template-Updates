@@ -4,16 +4,15 @@
     "controller.render.bow": {
       "arrays": {
         "textures": {
-          "Array.icons": [
+          "array.bow_texture_frames": [
             "texture.default",
             "texture.bow_pulling_0",
             "texture.bow_pulling_1",
-            "texture.bow_pulling_2",
-            "texture.enchanted"
+            "texture.bow_pulling_2"
           ]
         },
         "geometries": {
-          "Array.geo": [
+          "array.bow_geo_frames": [
             "geometry.default",
             "geometry.bow_pulling_0",
             "geometry.bow_pulling_1",
@@ -21,10 +20,9 @@
           ]
         }
       },
-      "geometry": "Array.geo[query.anim_time]",
-      //"materials": [ { "*": "query.isEnchanted ? Material.enchanted : Material.default" } ],
-      "materials": [ { "*": "Material.default" } ],
-      "textures": [ "Texture.default", "Texture.enchanted" ]
+      "geometry": "array.bow_geo_frames[variable.anim_frame]",
+      "materials": [ { "*": "variable.is_enchanted ? material.enchanted : material.default" } ],
+      "textures": [ "array.bow_texture_frames[variable.anim_frame]", "texture.enchanted" ]
     }
   }
 }
